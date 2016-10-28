@@ -6,6 +6,7 @@ Contributors:
 1. Vrachnos Athanasios (vrachnosthanos@gmail.com)
 2. Karagiannis Elias (ilkaragia@gmail.com)
 3. Archontides Giannis (john.archontides@gmail.com)
+4. Sofianos Panagiotis (sofpanos@hotmail.com)
 
 This software implements a multiple choice test designer. The following user requirments are met:
 
