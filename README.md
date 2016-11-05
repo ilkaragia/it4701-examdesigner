@@ -1,12 +1,12 @@
 # it4701-examdesigner
 IT4701 16-17Assignment154-Team B
 
-Contributors: 
+Contributors and Roles: 
 
-1. Vrachnos Athanasios (vrachnosthanos@gmail.com)
-2. Karagiannis Elias (ilkaragia@gmail.com)
-3. Archontides Giannis (john.archontides@gmail.com)
-4. Sofianos Panagiotis (sofpanos@hotmail.com)
+1. Vrachnos Athanasios: GUI Designer & Coder (vrachnosthanos@gmail.com)
+2. Karagiannis Elias: Database Designer & Coder (ilkaragia@gmail.com)
+3. Archontides Giannis: Database Designer & Coder (john.archontides@gmail.com)
+4. Sofianos Panagiotis: GUI Designer & Coder(sofpanos@hotmail.com)
 
 This software implements a multiple choice test designer. The following user requirments are met:
 
