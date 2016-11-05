@@ -1,0 +1,10 @@
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDesigner\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDesigner\obj\Debug\ExamDesigner.designer.resources
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDesigner\obj\Debug\ExamDesigner.vbproj.GenerateResource.Cache
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDesigner\bin\Debug\ExamDesigner.exe
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDesigner\bin\Debug\ExamDesigner.pdb
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDesigner\bin\Debug\ExamDesigner.xml
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDesigner\obj\Debug\ExamDesigner.Resources.resources
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDesigner\obj\Debug\ExamDesigner.exe
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDesigner\obj\Debug\ExamDesigner.xml
+C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDesigner\obj\Debug\ExamDesigner.pdb
