@@ -22,57 +22,61 @@ Partial Class designer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Root Folder")
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Child")
-        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Parent", New System.Windows.Forms.TreeNode() {TreeNode2})
+        Me.components = New System.ComponentModel.Container()
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Root Folder")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Child")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Parent", New System.Windows.Forms.TreeNode() {TreeNode5})
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.NewTopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.DeleteCategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.DeleteTopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.TreeView1 = New System.Windows.Forms.TreeView
-        Me.Button4 = New System.Windows.Forms.Button
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.questionListView = New System.Windows.Forms.ListView
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewTopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteCategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteTopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TreeView1 = New System.Windows.Forms.TreeView()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.editTopicButton = New System.Windows.Forms.Button()
+        Me.editCategoryButton = New System.Windows.Forms.Button()
+        Me.questionListView = New System.Windows.Forms.ListView()
         Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.NewQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.DeleteQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.Button7 = New System.Windows.Forms.Button
-        Me.Button5 = New System.Windows.Forms.Button
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.multiTopList = New System.Windows.Forms.ListBox
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.Label15 = New System.Windows.Forms.Label
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox
-        Me.GENbtn = New System.Windows.Forms.Button
-        Me.RANDOMIZEchkbox = New System.Windows.Forms.CheckBox
-        Me.LEVELtrackbar = New System.Windows.Forms.TrackBar
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.numQbox = New System.Windows.Forms.NumericUpDown
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.multiCatList = New System.Windows.Forms.ListBox
-        Me.AsasasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.GfgfgfgfgToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.NewCategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.DeleteCategoryToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.TopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.QuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.NewTopicToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.DeleteTopicToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.NewQuestionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.DeleteQuestionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
+        Me.NewQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.multiTopList = New System.Windows.Forms.ListBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.GENbtn = New System.Windows.Forms.Button()
+        Me.RANDOMIZEchkbox = New System.Windows.Forms.CheckBox()
+        Me.LEVELtrackbar = New System.Windows.Forms.TrackBar()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.numQbox = New System.Windows.Forms.NumericUpDown()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.multiCatList = New System.Windows.Forms.ListBox()
+        Me.AsasasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GfgfgfgfgToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewCategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditCategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteCategoryToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewTopicToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditTopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteTopicToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewQuestionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteQuestionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.ContextMenuStrip2.SuspendLayout()
@@ -87,7 +91,13 @@ Partial Class designer
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.NewTopicToolStripMenuItem, Me.DeleteCategoryToolStripMenuItem, Me.DeleteTopicToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(159, 114)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(159, 92)
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(158, 22)
+        Me.ToolStripMenuItem1.Text = "New Caegory"
         '
         'NewTopicToolStripMenuItem
         '
@@ -118,7 +128,7 @@ Partial Class designer
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(6, 373)
+        Me.Button3.Location = New System.Drawing.Point(9, 408)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(109, 28)
         Me.Button3.TabIndex = 5
@@ -139,19 +149,19 @@ Partial Class designer
         Me.TreeView1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.TreeView1.Location = New System.Drawing.Point(6, 45)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode1.Name = "Node0"
-        TreeNode1.Text = "Root Folder"
-        TreeNode2.Name = "Node5"
-        TreeNode2.Text = "Child"
-        TreeNode3.Name = "Node1"
-        TreeNode3.Text = "Parent"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode3})
+        TreeNode4.Name = "Node0"
+        TreeNode4.Text = "Root Folder"
+        TreeNode5.Name = "Node5"
+        TreeNode5.Text = "Child"
+        TreeNode6.Name = "Node1"
+        TreeNode6.Text = "Parent"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode6})
         Me.TreeView1.Size = New System.Drawing.Size(226, 288)
         Me.TreeView1.TabIndex = 1
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(124, 373)
+        Me.Button4.Location = New System.Drawing.Point(124, 408)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(108, 28)
         Me.Button4.TabIndex = 6
@@ -160,6 +170,8 @@ Partial Class designer
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.editTopicButton)
+        Me.GroupBox1.Controls.Add(Me.editCategoryButton)
         Me.GroupBox1.Controls.Add(Me.questionListView)
         Me.GroupBox1.Controls.Add(Me.Button7)
         Me.GroupBox1.Controls.Add(Me.TreeView1)
@@ -172,10 +184,28 @@ Partial Class designer
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 27)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(847, 415)
+        Me.GroupBox1.Size = New System.Drawing.Size(847, 449)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Repository Manager"
+        '
+        'editTopicButton
+        '
+        Me.editTopicButton.Location = New System.Drawing.Point(124, 374)
+        Me.editTopicButton.Name = "editTopicButton"
+        Me.editTopicButton.Size = New System.Drawing.Size(108, 28)
+        Me.editTopicButton.TabIndex = 14
+        Me.editTopicButton.Text = "Edit Topic"
+        Me.editTopicButton.UseVisualStyleBackColor = True
+        '
+        'editCategoryButton
+        '
+        Me.editCategoryButton.Location = New System.Drawing.Point(9, 374)
+        Me.editCategoryButton.Name = "editCategoryButton"
+        Me.editCategoryButton.Size = New System.Drawing.Size(108, 28)
+        Me.editCategoryButton.TabIndex = 13
+        Me.editCategoryButton.Text = "Edit Category"
+        Me.editCategoryButton.UseVisualStyleBackColor = True
         '
         'questionListView
         '
@@ -398,12 +428,12 @@ Partial Class designer
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'CategoryToolStripMenuItem
         '
-        Me.CategoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewCategoryToolStripMenuItem, Me.DeleteCategoryToolStripMenuItem1})
+        Me.CategoryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewCategoryToolStripMenuItem, Me.EditCategoryToolStripMenuItem, Me.DeleteCategoryToolStripMenuItem1})
         Me.CategoryToolStripMenuItem.Name = "CategoryToolStripMenuItem"
         Me.CategoryToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
         Me.CategoryToolStripMenuItem.Text = "Category"
@@ -414,6 +444,12 @@ Partial Class designer
         Me.NewCategoryToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.NewCategoryToolStripMenuItem.Text = "New Category"
         '
+        'EditCategoryToolStripMenuItem
+        '
+        Me.EditCategoryToolStripMenuItem.Name = "EditCategoryToolStripMenuItem"
+        Me.EditCategoryToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.EditCategoryToolStripMenuItem.Text = "Edit Category"
+        '
         'DeleteCategoryToolStripMenuItem1
         '
         Me.DeleteCategoryToolStripMenuItem1.Name = "DeleteCategoryToolStripMenuItem1"
@@ -422,24 +458,10 @@ Partial Class designer
         '
         'TopicToolStripMenuItem
         '
-        Me.TopicToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewTopicToolStripMenuItem1, Me.DeleteTopicToolStripMenuItem1})
+        Me.TopicToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewTopicToolStripMenuItem1, Me.EditTopicToolStripMenuItem, Me.DeleteTopicToolStripMenuItem1})
         Me.TopicToolStripMenuItem.Name = "TopicToolStripMenuItem"
         Me.TopicToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
         Me.TopicToolStripMenuItem.Text = "Topic"
-        '
-        'QuestionToolStripMenuItem
-        '
-        Me.QuestionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewQuestionToolStripMenuItem1, Me.DeleteQuestionToolStripMenuItem1})
-        Me.QuestionToolStripMenuItem.Name = "QuestionToolStripMenuItem"
-        Me.QuestionToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
-        Me.QuestionToolStripMenuItem.Text = "Question"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.HelpToolStripMenuItem.Text = "Help"
         '
         'NewTopicToolStripMenuItem1
         '
@@ -447,11 +469,24 @@ Partial Class designer
         Me.NewTopicToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.NewTopicToolStripMenuItem1.Text = "New Topic"
         '
+        'EditTopicToolStripMenuItem
+        '
+        Me.EditTopicToolStripMenuItem.Name = "EditTopicToolStripMenuItem"
+        Me.EditTopicToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditTopicToolStripMenuItem.Text = "Edit Topic"
+        '
         'DeleteTopicToolStripMenuItem1
         '
         Me.DeleteTopicToolStripMenuItem1.Name = "DeleteTopicToolStripMenuItem1"
         Me.DeleteTopicToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.DeleteTopicToolStripMenuItem1.Text = "Delete Topic"
+        '
+        'QuestionToolStripMenuItem
+        '
+        Me.QuestionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewQuestionToolStripMenuItem1, Me.DeleteQuestionToolStripMenuItem1})
+        Me.QuestionToolStripMenuItem.Name = "QuestionToolStripMenuItem"
+        Me.QuestionToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
+        Me.QuestionToolStripMenuItem.Text = "Question"
         '
         'NewQuestionToolStripMenuItem1
         '
@@ -465,23 +500,24 @@ Partial Class designer
         Me.DeleteQuestionToolStripMenuItem1.Size = New System.Drawing.Size(158, 22)
         Me.DeleteQuestionToolStripMenuItem1.Text = "Delete Question"
         '
+        'HelpToolStripMenuItem
+        '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
+        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Text = "Help"
+        '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem.Text = "About"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(158, 22)
-        Me.ToolStripMenuItem1.Text = "New Caegory"
         '
         'designer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1547, 455)
+        Me.ClientSize = New System.Drawing.Size(1547, 481)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
@@ -565,5 +601,9 @@ Partial Class designer
     Friend WithEvents DeleteQuestionToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents editTopicButton As System.Windows.Forms.Button
+    Friend WithEvents editCategoryButton As System.Windows.Forms.Button
+    Friend WithEvents EditCategoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents EditTopicToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
