@@ -8,7 +8,7 @@ Contributors and Roles:
 3. Archontides Giannis: Database Designer & Coder (john.archontides@gmail.com)
 4. Sofianos Panagiotis: GUI Designer & Coder(sofpanos@hotmail.com)
 
-This software implements a multiple choice test designer. The following user requirments are met:
+This software implements a multiple choice test designer. The following user requirements are met:
 
 1. User can organize the questions based on lesson category/topic,difficulty.
 2. User can add/remove categories/topics/questions.
