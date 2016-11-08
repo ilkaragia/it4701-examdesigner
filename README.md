@@ -13,6 +13,6 @@ This software implements a multiple choice test designer. The following user req
 1. User can organize the questions based on lesson category/topic,difficulty.
 2. User can add/remove categories/topics/questions.
 3. User can generate a new test by specifying the categories/topics/max.questions/difficulty.
-4. The test can be view and printed.
+4. The test can be viewed and printed.
 
 Languages used: VB.NET, MSSQL
