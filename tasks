@@ -5,3 +5,7 @@ The develpoment of ExamDesigner consists of the following tasks:
 Duration: 3x8hours
 Basic GUI Design: Thanos Vrachnos
 Supplementary forms: Panagiotis Sofianos
+
+2. Implement the basic form functions, dialog workflow as well as the basic database schema for storing/retrieving categories,topics and questions.
+Duration: 3x24hours
+Elias Karagiannis, John Archontides
