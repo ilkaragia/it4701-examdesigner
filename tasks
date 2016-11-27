@@ -6,6 +6,30 @@ Duration: 3x8hours
 Basic GUI Design: Thanos Vrachnos
 Supplementary forms: Panagiotis Sofianos
 
-2. Implement the basic form functions, dialog workflow as well as the basic database schema for storing/retrieving categories,topics and questions.
+2. Implement the basic form functions (insert/delete category, topic, question), dialog workflow as well as the basic database schema for storing/retrieving categories,topics and questions.
 Duration: 3x24hours
 Elias Karagiannis, John Archontides
+
+3. Finalize the db schema for storing all the relevant info, fix some artifacts in the main treeview, additional handy functions (select all,none, filtering by selection).
+Duration: 5x24hours
+Panagiotis Sofianos
+
+4. Finalize filtering by selection (John Archontides), dummy Viewer GUI design (Thanos Vrachnos)
+Duration: 8 hours
+
+5. Additional db tables for storing user options and generating the final exam. Handy selection counters for the user (total selected topics,questions)
+Duration: 2x8 hours
+
+6. Complexity factors feature (number of questions, difficulty level, randomization), generate function.
+Duration: 8hours
+Thanos Vrachnos
+
+7. Viewer GUI implementation, display contecnt, save to local file and print function.
+Duration: 4 hours
+Thanos Vrachnos
+
+8. Edit existing questions form and code (Panagiotis Sofianos), About form graphic (Thanos Vrachnos)
+Duration: 2x8 hours
+
+9. DB coomunication diagnostic splash screen (Thanos Vrachnos)
+Duration: 2 hours
