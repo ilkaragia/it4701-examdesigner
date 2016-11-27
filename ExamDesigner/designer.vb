@@ -24,6 +24,70 @@
         'Διαγραφή της επιλεγμένης ερώτησης από τη βάση
     End Sub
     
+     Private Sub designer_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        Label13.Text = "0"
+        Dim treeDataSet As DataSet
+        Dim categoriesTA As New SqlClient.SqlDataAdapter("SELECT name,cid from categories", myConn)
+        Dim topicsTA As New SqlClient.SqlDataAdapter("SELECT name,cid FROM topics where cid in (select cid from categories)", myConn)
+        Dim questionsTA As New SqlClient.SqlDataAdapter("SELECT qid,txt,opta,optb,optc,optd,level from questions where tid in(select tid from topics)", myConn)
+        treeDataSet = New DataSet()
+        myConn.Open()
+        categoriesTA.Fill(treeDataSet, "categories")
+        topicsTA.Fill(treeDataSet, "topics")
+        questionsTA.Fill(treeDataSet, "questions")
+        myConn.Close()
+        treeDataSet.Relations.Add("topics2cats", treeDataSet.Tables(0).Columns("cid"), treeDataSet.Tables(1).Columns("cid"))
+        'treeDataSet.Relations.Add("questions2topics", treeDataSet.Tables(1).Columns("tid"), treeDataSet.Tables(2).Columns("tid"))
+        TreeView1.Nodes.Clear()
+
+        Dim i, n As Integer
+        n = 0
+        Dim parentrow As DataRow
+        Dim ParentTable As DataTable
+        Dim qlistDTable As DataTable
+        ParentTable = treeDataSet.Tables(0)
+        qlistDTable = treeDataSet.Tables(2)
+        'TeeView & MultiLists population
+        TreeView1.Nodes.Add("My Repository")
+        For Each parentrow In ParentTable.Rows
+            Dim parentnode As TreeNode
+            parentnode = New TreeNode("Category: " + parentrow.Item(0))
+            parentnode.Tag = parentrow.Item(0)
+            TreeView1.Nodes.Add(parentnode)
+            multiCatList.Items.Add(parentrow.Item(0))
+            'childs population
+            Dim childrow As DataRow
+            Dim childnode As TreeNode
+            childnode = New TreeNode()
+            For Each childrow In parentrow.GetChildRows("topics2cats")
+                childnode = parentnode.Nodes.Add("Topic: " + childrow(0))
+                childnode.Tag = childrow("name")
+                'multiTopList.Items.Add(childnode.Text)
+            Next childrow
+        Next parentrow
+        'qListView population
+        Dim listviewsubitem As ListViewItem
+        For Each parentrow In qlistDTable.Rows
+            Dim listviewitem As ListViewItem
+            listviewitem = New ListViewItem(parentrow.Item(0).ToString)
+            questionListView.Items.Add(listviewitem)
+            'qListView child population
+            For i = 1 To 6
+                listviewsubitem = New ListViewItem(parentrow.Item(i).ToString)
+                listviewitem.SubItems.Add(listviewsubitem.Text)
+                'questionListView.Items.Item(0).SubItems.Add(parentrow.Item(i).ToString)
+            Next
+        Next
+        Label9.Text = questionListView.Items.Count.ToString
+        Label11.Text = multiCatList.Items.Count.ToString
+        'If questionListView.Items.Count = 0 Then
+        'Button7.Enabled = False
+        'Else
+        'Button7.Enabled = True
+        'End If
+    End Sub
+    
      Private Sub Button11_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sALLbtn.Click
         Dim i As Integer
         For i = 0 To multiTopList.Items.Count - 1
@@ -104,6 +168,31 @@
         Next
     End Sub
     
+    Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles multiCatList.SelectedIndexChanged
+        ' OTAN DEN DIALEGO TIPOTE NA MIN KSEKINAEI QUERY
+        If multiCatList.SelectedItems.Count <> 0 Then
+            multiTopList.Items.Clear()
+            myFilteredCmd = myConn.CreateCommand
+            myFilteredCmd.CommandText = "SELECT name FROM topics WHERE cid in(select cid from categories where name='" & multiCatList.SelectedItem.ToString & "')"
+            myConn.Open()
+            myFilteredCmd.ExecuteNonQuery()
+            myReader = myFilteredCmd.ExecuteReader()
+            Do While myReader.Read()
+                results = myReader.GetString(0)
+                multiTopList.Items.Add(results)
+            Loop
+            myReader.Close()
+            myConn.Close()
+            sALLbtn.Enabled = True
+            sNONEbtn.Enabled = True
+            SAVEbtn.Enabled = True
+        End If
+    End Sub
+
+Private Sub multiTopList_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles multiTopList.SelectedIndexChanged
+        Label13.Text = multiTopList.SelectedItems.Count.ToString
+    End Sub
+
     Private Sub NewTopicToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles NewTopicToolStripMenuItem1.Click
         insTopicForm.Show()
     End Sub
