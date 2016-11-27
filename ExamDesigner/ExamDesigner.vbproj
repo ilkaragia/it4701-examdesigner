@@ -69,9 +69,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="designer.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="designer.Designer.vb">
       <DependentUpon>designer.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insCategoryForm.Designer.vb">
+      <DependentUpon>insCategoryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insCategoryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insQuestionForm.Designer.vb">
+      <DependentUpon>insQuestionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insQuestionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insTopicForm.Designer.vb">
+      <DependentUpon>insTopicForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="insTopicForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -89,16 +108,38 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="viewer.Designer.vb">
+      <DependentUpon>viewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="viewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="designer.resx">
       <DependentUpon>designer.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="insCategoryForm.resx">
+      <DependentUpon>insCategoryForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insQuestionForm.resx">
+      <DependentUpon>insQuestionForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insTopicForm.resx">
+      <DependentUpon>insTopicForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewer.resx">
+      <DependentUpon>viewer.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -112,6 +153,15 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\about.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteRed.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2000px-Print_font_awesome.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

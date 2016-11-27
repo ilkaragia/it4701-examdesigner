@@ -22,12 +22,12 @@ Partial Class insTopicForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.topicTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.categoryCombo = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.topicTextBox = New System.Windows.Forms.TextBox
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.categoryCombo = New System.Windows.Forms.ComboBox
         Me.SuspendLayout()
         '
         'Label1

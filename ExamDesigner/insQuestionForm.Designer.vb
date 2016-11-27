@@ -22,24 +22,24 @@ Partial Class insQuestionForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.qRichTxtBox = New System.Windows.Forms.RichTextBox()
-        Me.OKbutton = New System.Windows.Forms.Button()
-        Me.CancelButton = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.o1RichTxtBox = New System.Windows.Forms.RichTextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.o2RichTxtBox = New System.Windows.Forms.RichTextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.o3RichTxtBox = New System.Windows.Forms.RichTextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.o4RichTxtBox = New System.Windows.Forms.RichTextBox()
-        Me.categoryCombo1 = New System.Windows.Forms.ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.topicsCombo = New System.Windows.Forms.ComboBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.levelCombo = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.qRichTxtBox = New System.Windows.Forms.RichTextBox
+        Me.OKbutton = New System.Windows.Forms.Button
+        Me.CancelButton = New System.Windows.Forms.Button
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.o1RichTxtBox = New System.Windows.Forms.RichTextBox
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.o2RichTxtBox = New System.Windows.Forms.RichTextBox
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.o3RichTxtBox = New System.Windows.Forms.RichTextBox
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.o4RichTxtBox = New System.Windows.Forms.RichTextBox
+        Me.categoryCombo1 = New System.Windows.Forms.ComboBox
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.topicsCombo = New System.Windows.Forms.ComboBox
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.levelCombo = New System.Windows.Forms.ComboBox
         Me.SuspendLayout()
         '
         'Label1
