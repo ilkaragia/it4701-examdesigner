@@ -15,4 +15,9 @@ This software implements a multiple choice test designer. The following user req
 3. User can generate a new test by specifying the categories/topics/max.questions/difficulty.
 4. The test can be viewed and printed.
 
-Languages used: VB.NET, MSSQL
+Additional features:
+
+1. The generated test can be saved locally.
+2. The user can perform db cleanup functions.
+
+Languages used: VB.NET, MSSQL, HTML
