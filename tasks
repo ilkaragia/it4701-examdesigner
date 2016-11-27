@@ -14,17 +14,19 @@ Elias Karagiannis, John Archontides
 Duration: 5x24hours
 Panagiotis Sofianos
 
-4. Finalize filtering by selection (John Archontides), dummy Viewer GUI design (Thanos Vrachnos)
+4. Finalize filtering by selection, dummy Viewer GUI design.
+John Archontides
 Duration: 8 hours
 
 5. Additional db tables for storing user options and generating the final exam. Handy selection counters for the user (total selected topics,questions)
 Duration: 2x8 hours
+Elias Karagiannis
 
 6. Complexity factors feature (number of questions, difficulty level, randomization), generate function.
 Duration: 8hours
 Thanos Vrachnos
 
-7. Viewer GUI implementation, display contecnt, save to local file and print function.
+7. Viewer GUI implementation, display content, save to local file and print function.
 Duration: 4 hours
 Thanos Vrachnos
 
