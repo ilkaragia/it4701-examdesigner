@@ -8,3 +8,16 @@ C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDe
 C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDesigner\obj\Debug\ExamDesigner.exe
 C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDesigner\obj\Debug\ExamDesigner.xml
 C:\Users\Admin\Documents\Visual Studio 2008\Projects\ExamDesigner_COMMIT1\ExamDesigner\obj\Debug\ExamDesigner.pdb
+C:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\it4701-examdesigner-Gui-viewer\ExamDesigner\bin\Debug\ExamDesigner.exe
+C:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\it4701-examdesigner-Gui-viewer\ExamDesigner\bin\Debug\ExamDesigner.pdb
+C:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\it4701-examdesigner-Gui-viewer\ExamDesigner\bin\Debug\ExamDesigner.xml
+C:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\it4701-examdesigner-Gui-viewer\ExamDesigner\obj\Debug\ExamDesigner.designer.resources
+C:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\it4701-examdesigner-Gui-viewer\ExamDesigner\obj\Debug\ExamDesigner.insCategoryForm.resources
+C:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\it4701-examdesigner-Gui-viewer\ExamDesigner\obj\Debug\ExamDesigner.insQuestionForm.resources
+C:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\it4701-examdesigner-Gui-viewer\ExamDesigner\obj\Debug\ExamDesigner.insTopicForm.resources
+C:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\it4701-examdesigner-Gui-viewer\ExamDesigner\obj\Debug\ExamDesigner.Resources.resources
+C:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\it4701-examdesigner-Gui-viewer\ExamDesigner\obj\Debug\ExamDesigner.viewer.resources
+C:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\it4701-examdesigner-Gui-viewer\ExamDesigner\obj\Debug\ExamDesigner.vbproj.GenerateResource.Cache
+C:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\it4701-examdesigner-Gui-viewer\ExamDesigner\obj\Debug\ExamDesigner.exe
+C:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\it4701-examdesigner-Gui-viewer\ExamDesigner\obj\Debug\ExamDesigner.xml
+C:\Users\Konstantinos\Documents\Visual Studio 2013\Projects\it4701-examdesigner-Gui-viewer\ExamDesigner\obj\Debug\ExamDesigner.pdb

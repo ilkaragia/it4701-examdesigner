@@ -15,6 +15,14 @@ ExamDesigner
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:ExamDesigner.My.Resources.Resources._2000px_Print_font_awesome_svg">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:ExamDesigner.My.Resources.Resources.DeleteRed">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="T:ExamDesigner.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
