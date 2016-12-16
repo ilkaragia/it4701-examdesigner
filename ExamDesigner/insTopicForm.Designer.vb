@@ -22,65 +22,65 @@ Partial Class insTopicForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.topicTextBox = New System.Windows.Forms.TextBox
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.categoryCombo = New System.Windows.Forms.ComboBox
+        Me.InsertTopicLabel = New System.Windows.Forms.Label()
+        Me.TopicTextBox = New System.Windows.Forms.TextBox()
+        Me.OKInsTopicButton = New System.Windows.Forms.Button()
+        Me.CancelInsTopicButton = New System.Windows.Forms.Button()
+        Me.SelectCategoryLabel = New System.Windows.Forms.Label()
+        Me.CategoryComboBox = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
-        'Label1
+        'InsertTopicLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(33, 61)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(66, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Insert Topic:"
+        Me.InsertTopicLabel.AutoSize = True
+        Me.InsertTopicLabel.Location = New System.Drawing.Point(33, 61)
+        Me.InsertTopicLabel.Name = "InsertTopicLabel"
+        Me.InsertTopicLabel.Size = New System.Drawing.Size(66, 13)
+        Me.InsertTopicLabel.TabIndex = 0
+        Me.InsertTopicLabel.Text = "Insert Topic:"
         '
-        'topicTextBox
+        'TopicTextBox
         '
-        Me.topicTextBox.Location = New System.Drawing.Point(109, 58)
-        Me.topicTextBox.Name = "topicTextBox"
-        Me.topicTextBox.ReadOnly = True
-        Me.topicTextBox.Size = New System.Drawing.Size(250, 20)
-        Me.topicTextBox.TabIndex = 1
+        Me.TopicTextBox.Location = New System.Drawing.Point(109, 58)
+        Me.TopicTextBox.Name = "TopicTextBox"
+        Me.TopicTextBox.ReadOnly = True
+        Me.TopicTextBox.Size = New System.Drawing.Size(250, 20)
+        Me.TopicTextBox.TabIndex = 1
         '
-        'Button1
+        'OKInsTopicButton
         '
-        Me.Button1.Location = New System.Drawing.Point(155, 94)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(71, 24)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "&OK"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.OKInsTopicButton.Location = New System.Drawing.Point(155, 94)
+        Me.OKInsTopicButton.Name = "OKInsTopicButton"
+        Me.OKInsTopicButton.Size = New System.Drawing.Size(71, 24)
+        Me.OKInsTopicButton.TabIndex = 2
+        Me.OKInsTopicButton.Text = "&OK"
+        Me.OKInsTopicButton.UseVisualStyleBackColor = True
         '
-        'Button2
+        'CancelInsTopicButton
         '
-        Me.Button2.Location = New System.Drawing.Point(232, 94)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(68, 24)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "&Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.CancelInsTopicButton.Location = New System.Drawing.Point(232, 94)
+        Me.CancelInsTopicButton.Name = "CancelInsTopicButton"
+        Me.CancelInsTopicButton.Size = New System.Drawing.Size(68, 24)
+        Me.CancelInsTopicButton.TabIndex = 3
+        Me.CancelInsTopicButton.Text = "&Cancel"
+        Me.CancelInsTopicButton.UseVisualStyleBackColor = True
         '
-        'Label2
+        'SelectCategoryLabel
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(14, 17)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(85, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Select Category:"
+        Me.SelectCategoryLabel.AutoSize = True
+        Me.SelectCategoryLabel.Location = New System.Drawing.Point(14, 17)
+        Me.SelectCategoryLabel.Name = "SelectCategoryLabel"
+        Me.SelectCategoryLabel.Size = New System.Drawing.Size(85, 13)
+        Me.SelectCategoryLabel.TabIndex = 4
+        Me.SelectCategoryLabel.Text = "Select Category:"
         '
-        'categoryCombo
+        'CategoryComboBox
         '
-        Me.categoryCombo.FormattingEnabled = True
-        Me.categoryCombo.Location = New System.Drawing.Point(109, 15)
-        Me.categoryCombo.Name = "categoryCombo"
-        Me.categoryCombo.Size = New System.Drawing.Size(250, 21)
-        Me.categoryCombo.TabIndex = 5
+        Me.CategoryComboBox.FormattingEnabled = True
+        Me.CategoryComboBox.Location = New System.Drawing.Point(109, 15)
+        Me.CategoryComboBox.Name = "CategoryComboBox"
+        Me.CategoryComboBox.Size = New System.Drawing.Size(250, 21)
+        Me.CategoryComboBox.TabIndex = 5
         '
         'insTopicForm
         '
@@ -88,12 +88,12 @@ Partial Class insTopicForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(394, 136)
         Me.ControlBox = False
-        Me.Controls.Add(Me.categoryCombo)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.topicTextBox)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.CategoryComboBox)
+        Me.Controls.Add(Me.SelectCategoryLabel)
+        Me.Controls.Add(Me.CancelInsTopicButton)
+        Me.Controls.Add(Me.OKInsTopicButton)
+        Me.Controls.Add(Me.TopicTextBox)
+        Me.Controls.Add(Me.InsertTopicLabel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "insTopicForm"
         Me.ShowInTaskbar = False
@@ -104,10 +104,10 @@ Partial Class insTopicForm
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents topicTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Private WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents categoryCombo As System.Windows.Forms.ComboBox
+    Friend WithEvents InsertTopicLabel As System.Windows.Forms.Label
+    Friend WithEvents TopicTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents OKInsTopicButton As System.Windows.Forms.Button
+    Friend WithEvents CancelInsTopicButton As System.Windows.Forms.Button
+    Private WithEvents SelectCategoryLabel As System.Windows.Forms.Label
+    Friend WithEvents CategoryComboBox As System.Windows.Forms.ComboBox
 End Class

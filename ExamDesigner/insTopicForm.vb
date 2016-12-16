@@ -5,28 +5,28 @@ Public Class insTopicForm
     Private myCmd, myCmd2 As SqlCommand
     Private myReader, myReader2 As SqlDataReader
     Private results, results2 As String
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        Me.Hide()
 
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CancelInsTopicButton.Click
+        Me.Hide()
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub OKInsTopicButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OKInsTopicButton.Click
         myConn = New SqlConnection("Initial Catalog=exams; Data Source=5.172.194.44;User Id=sa;Password=ad0ps3!@#")
         myCmd = myConn.CreateCommand
-        myCmd.CommandText = "INSERT INTO topics (cid, name)VALUES ('" & results2 & "', '" & topicTextBox.Text & "')"
+        myCmd.CommandText = "INSERT INTO topics (cid, name)VALUES ('" & results2 & "', '" & TopicTextBox.Text & "')"
         myConn.Open()
         myCmd.ExecuteNonQuery()
         MessageBox.Show("Topic inserted!", "Information")
         myConn.Close()
-        designer.ReloadBtn.PerformClick()
+        designer.Reload()
         Me.Dispose()
         Me.Hide()
     End Sub
 
     Private Sub insTopicForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        categoryCombo.SelectedItem = Nothing
-        topicTextBox.Text = ""
-        topicTextBox.Enabled = False
+        CategoryComboBox.SelectedItem = Nothing
+        TopicTextBox.Text = ""
+        TopicTextBox.Enabled = False
 
         myConn = New SqlConnection("Initial Catalog=exams; Data Source=5.172.194.44;User Id=sa;Password=ad0ps3!@#")
         myCmd = myConn.CreateCommand
@@ -36,18 +36,18 @@ Public Class insTopicForm
         myReader = myCmd.ExecuteReader()
         Do While myReader.Read()
             results = myReader.GetString(0)
-            categoryCombo.Items.Add(results)
+            CategoryComboBox.Items.Add(results)
         Loop
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles categoryCombo.SelectedIndexChanged
-        topicTextBox.ReadOnly = False
-        topicTextBox.Enabled = True
+    Private Sub CategoryComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CategoryComboBox.SelectedIndexChanged
+        TopicTextBox.ReadOnly = False
+        TopicTextBox.Enabled = True
 
 
         myConn = New SqlConnection("Initial Catalog=exams; Data Source=5.172.194.44;User Id=sa;Password=ad0ps3!@#")
         myCmd2 = myConn.CreateCommand
-        myCmd2.CommandText = "select cid from categories where name= '" & categoryCombo.Text & "'"
+        myCmd2.CommandText = "select cid from categories where name= '" & CategoryComboBox.Text & "'"
         myConn.Open()
         myCmd2.ExecuteNonQuery()
         myReader2 = myCmd2.ExecuteReader()
@@ -55,7 +55,7 @@ Public Class insTopicForm
             results2 = myReader2.GetInt32(0)
             'MessageBox.Show("DEBUG: CID LOADED!")
         Loop
-        
+
         myConn.Close()
     End Sub
 End Class

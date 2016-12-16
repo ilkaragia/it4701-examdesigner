@@ -22,96 +22,93 @@ Partial Class designer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Root Folder")
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Child")
-        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Parent", New System.Windows.Forms.TreeNode() {TreeNode2})
+        Me.components = New System.ComponentModel.Container()
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Root Folder")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Child")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Parent", New System.Windows.Forms.TreeNode() {TreeNode5})
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.NewTopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.DeleteCategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.DeleteTopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.TreeView1 = New System.Windows.Forms.TreeView
-        Me.Button4 = New System.Windows.Forms.Button
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Button10 = New System.Windows.Forms.Button
-        Me.Button9 = New System.Windows.Forms.Button
-        Me.questionListView = New System.Windows.Forms.ListView
-        Me.qid = New System.Windows.Forms.ColumnHeader
-        Me.Question = New System.Windows.Forms.ColumnHeader
-        Me.Answer1 = New System.Windows.Forms.ColumnHeader
-        Me.Answer2 = New System.Windows.Forms.ColumnHeader
-        Me.Answer3 = New System.Windows.Forms.ColumnHeader
-        Me.Answer4 = New System.Windows.Forms.ColumnHeader
-        Me.Level = New System.Windows.Forms.ColumnHeader
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewTopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteCategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteTopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewTopicButton = New System.Windows.Forms.Button()
+        Me.DeleteCategoryButton = New System.Windows.Forms.Button()
+        Me.NewCategoryButton = New System.Windows.Forms.Button()
+        Me.TreeView1 = New System.Windows.Forms.TreeView()
+        Me.DeleteTopicButton = New System.Windows.Forms.Button()
+        Me.ReposManagGroupBox = New System.Windows.Forms.GroupBox()
+        Me.TotalQuestValueLabel = New System.Windows.Forms.Label()
+        Me.TotalQuestLabel = New System.Windows.Forms.Label()
+        Me.EditTopicButton = New System.Windows.Forms.Button()
+        Me.EditCategoryButton = New System.Windows.Forms.Button()
+        Me.QuestionListView = New System.Windows.Forms.ListView()
+        Me.qid = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Question = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Answer1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Answer2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Answer3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Answer4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Level = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.NewQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.DeleteQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.Button7 = New System.Windows.Forms.Button
-        Me.Button6 = New System.Windows.Forms.Button
-        Me.Button5 = New System.Windows.Forms.Button
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.childclicked = New System.Windows.Forms.Label
-        Me.multiTopList = New System.Windows.Forms.ListBox
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.sNONEbtn = New System.Windows.Forms.Button
-        Me.SAVEbtn = New System.Windows.Forms.Button
-        Me.Label15 = New System.Windows.Forms.Label
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.sALLbtn = New System.Windows.Forms.Button
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.Label14 = New System.Windows.Forms.Label
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox
-        Me.anyCHK = New System.Windows.Forms.CheckBox
-        Me.Label16 = New System.Windows.Forms.Label
-        Me.GENbtn = New System.Windows.Forms.Button
-        Me.RANDOMIZEchkbox = New System.Windows.Forms.CheckBox
-        Me.LEVELtrackbar = New System.Windows.Forms.TrackBar
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.numQbox = New System.Windows.Forms.NumericUpDown
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.multiCatList = New System.Windows.Forms.ListBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.ReloadBtn = New System.Windows.Forms.Button
+        Me.NewQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteQuestionButton = New System.Windows.Forms.Button()
+        Me.EditQuestionButton = New System.Windows.Forms.Button()
+        Me.NewQuestionButton = New System.Windows.Forms.Button()
+        Me.QuestionsViewLabel = New System.Windows.Forms.Label()
+        Me.RepositoryViewLabel = New System.Windows.Forms.Label()
+        Me.MultiTopListBox = New System.Windows.Forms.ListBox()
+        Me.TextManagerGroupBox = New System.Windows.Forms.GroupBox()
+        Me.QuestsInTopsValueLabel = New System.Windows.Forms.Label()
+        Me.QuestsInTopsLabel = New System.Windows.Forms.Label()
+        Me.SelectNoneButton = New System.Windows.Forms.Button()
+        Me.SaveButton = New System.Windows.Forms.Button()
+        Me.TopicsFilterLabel = New System.Windows.Forms.Label()
+        Me.SelectedTopValueLabel = New System.Windows.Forms.Label()
+        Me.SelectAllButton = New System.Windows.Forms.Button()
+        Me.SelectedTopLabel = New System.Windows.Forms.Label()
+        Me.CategoriesFilterLabel = New System.Windows.Forms.Label()
+        Me.TotalCategValueLabel = New System.Windows.Forms.Label()
+        Me.TotalCategLabel = New System.Windows.Forms.Label()
+        Me.ComplexityGroupBox = New System.Windows.Forms.GroupBox()
+        Me.AnyLvlCheckBox = New System.Windows.Forms.CheckBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.GenerateButton = New System.Windows.Forms.Button()
+        Me.RandomizeCheckBox = New System.Windows.Forms.CheckBox()
+        Me.LevelTrackBar = New System.Windows.Forms.TrackBar()
+        Me.LevelLabel = New System.Windows.Forms.Label()
+        Me.numOfQuestNumBox = New System.Windows.Forms.NumericUpDown()
+        Me.NumOfQuestLabel = New System.Windows.Forms.Label()
+        Me.MultiCategListBox = New System.Windows.Forms.ListBox()
+        Me.HintLabel = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.MaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.NewCategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.EditCategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.DeleteCategoryToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.TopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.NewTopicToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.EditTopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.DeleteTopicToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.QuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.NewQuestionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.EditQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.DeleteQuestionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.TextBox1 = New System.Windows.Forms.TextBox
+        Me.MenuStrip = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MaintenanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewCategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditCategoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteCategoryToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewTopicToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditTopicToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteTopicToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewQuestionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DeleteQuestionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.ReposManagGroupBox.SuspendLayout()
         Me.ContextMenuStrip2.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
-        CType(Me.LEVELtrackbar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.numQbox, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
+        Me.TextManagerGroupBox.SuspendLayout()
+        Me.ComplexityGroupBox.SuspendLayout()
+        CType(Me.LevelTrackBar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numOfQuestNumBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'ContextMenuStrip1
@@ -144,136 +141,136 @@ Partial Class designer
         Me.DeleteTopicToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.DeleteTopicToolStripMenuItem.Text = "Delete Topic"
         '
-        'Button2
+        'NewTopicButton
         '
-        Me.Button2.Location = New System.Drawing.Point(122, 339)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(109, 29)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "New Topic"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.NewTopicButton.Location = New System.Drawing.Point(122, 339)
+        Me.NewTopicButton.Name = "NewTopicButton"
+        Me.NewTopicButton.Size = New System.Drawing.Size(109, 29)
+        Me.NewTopicButton.TabIndex = 3
+        Me.NewTopicButton.Text = "New Topic"
+        Me.NewTopicButton.UseVisualStyleBackColor = True
         '
-        'Button3
+        'DeleteCategoryButton
         '
-        Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(6, 406)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(109, 28)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Delete Category"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.DeleteCategoryButton.Enabled = False
+        Me.DeleteCategoryButton.Location = New System.Drawing.Point(6, 406)
+        Me.DeleteCategoryButton.Name = "DeleteCategoryButton"
+        Me.DeleteCategoryButton.Size = New System.Drawing.Size(109, 28)
+        Me.DeleteCategoryButton.TabIndex = 5
+        Me.DeleteCategoryButton.Text = "Delete Category"
+        Me.DeleteCategoryButton.UseVisualStyleBackColor = True
         '
-        'Button1
+        'NewCategoryButton
         '
-        Me.Button1.Location = New System.Drawing.Point(6, 338)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(111, 29)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "New Category"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.NewCategoryButton.Location = New System.Drawing.Point(6, 338)
+        Me.NewCategoryButton.Name = "NewCategoryButton"
+        Me.NewCategoryButton.Size = New System.Drawing.Size(111, 29)
+        Me.NewCategoryButton.TabIndex = 2
+        Me.NewCategoryButton.Text = "New Category"
+        Me.NewCategoryButton.UseVisualStyleBackColor = True
         '
         'TreeView1
         '
         Me.TreeView1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.TreeView1.Location = New System.Drawing.Point(6, 45)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode1.Name = "Node0"
-        TreeNode1.Text = "Root Folder"
-        TreeNode2.Name = "Node5"
-        TreeNode2.Text = "Child"
-        TreeNode3.Name = "Node1"
-        TreeNode3.Text = "Parent"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode3})
+        TreeNode4.Name = "Node0"
+        TreeNode4.Text = "Root Folder"
+        TreeNode5.Name = "Node5"
+        TreeNode5.Text = "Child"
+        TreeNode6.Name = "Node1"
+        TreeNode6.Text = "Parent"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode6})
         Me.TreeView1.Size = New System.Drawing.Size(226, 288)
         Me.TreeView1.TabIndex = 1
         '
-        'Button4
+        'DeleteTopicButton
         '
-        Me.Button4.Enabled = False
-        Me.Button4.Location = New System.Drawing.Point(124, 406)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(108, 28)
-        Me.Button4.TabIndex = 6
-        Me.Button4.Text = "Delete Topic"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.DeleteTopicButton.Enabled = False
+        Me.DeleteTopicButton.Location = New System.Drawing.Point(124, 406)
+        Me.DeleteTopicButton.Name = "DeleteTopicButton"
+        Me.DeleteTopicButton.Size = New System.Drawing.Size(108, 28)
+        Me.DeleteTopicButton.TabIndex = 6
+        Me.DeleteTopicButton.Text = "Delete Topic"
+        Me.DeleteTopicButton.UseVisualStyleBackColor = True
         '
-        'GroupBox1
+        'ReposManagGroupBox
         '
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Button10)
-        Me.GroupBox1.Controls.Add(Me.Button9)
-        Me.GroupBox1.Controls.Add(Me.questionListView)
-        Me.GroupBox1.Controls.Add(Me.Button7)
-        Me.GroupBox1.Controls.Add(Me.Button6)
-        Me.GroupBox1.Controls.Add(Me.TreeView1)
-        Me.GroupBox1.Controls.Add(Me.Button5)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.Button4)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Button3)
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 27)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(847, 451)
-        Me.GroupBox1.TabIndex = 7
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Repository Manager"
+        Me.ReposManagGroupBox.Controls.Add(Me.TotalQuestValueLabel)
+        Me.ReposManagGroupBox.Controls.Add(Me.TotalQuestLabel)
+        Me.ReposManagGroupBox.Controls.Add(Me.EditTopicButton)
+        Me.ReposManagGroupBox.Controls.Add(Me.EditCategoryButton)
+        Me.ReposManagGroupBox.Controls.Add(Me.QuestionListView)
+        Me.ReposManagGroupBox.Controls.Add(Me.DeleteQuestionButton)
+        Me.ReposManagGroupBox.Controls.Add(Me.EditQuestionButton)
+        Me.ReposManagGroupBox.Controls.Add(Me.TreeView1)
+        Me.ReposManagGroupBox.Controls.Add(Me.NewQuestionButton)
+        Me.ReposManagGroupBox.Controls.Add(Me.QuestionsViewLabel)
+        Me.ReposManagGroupBox.Controls.Add(Me.RepositoryViewLabel)
+        Me.ReposManagGroupBox.Controls.Add(Me.DeleteTopicButton)
+        Me.ReposManagGroupBox.Controls.Add(Me.NewTopicButton)
+        Me.ReposManagGroupBox.Controls.Add(Me.DeleteCategoryButton)
+        Me.ReposManagGroupBox.Controls.Add(Me.NewCategoryButton)
+        Me.ReposManagGroupBox.Location = New System.Drawing.Point(12, 27)
+        Me.ReposManagGroupBox.Name = "ReposManagGroupBox"
+        Me.ReposManagGroupBox.Size = New System.Drawing.Size(847, 451)
+        Me.ReposManagGroupBox.TabIndex = 7
+        Me.ReposManagGroupBox.TabStop = False
+        Me.ReposManagGroupBox.Text = "Repository Manager"
         '
-        'Label9
+        'TotalQuestValueLabel
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(806, 338)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(13, 13)
-        Me.Label9.TabIndex = 16
-        Me.Label9.Text = "0"
+        Me.TotalQuestValueLabel.AutoSize = True
+        Me.TotalQuestValueLabel.Location = New System.Drawing.Point(806, 338)
+        Me.TotalQuestValueLabel.Name = "TotalQuestValueLabel"
+        Me.TotalQuestValueLabel.Size = New System.Drawing.Size(13, 13)
+        Me.TotalQuestValueLabel.TabIndex = 16
+        Me.TotalQuestValueLabel.Text = "0"
         '
-        'Label6
+        'TotalQuestLabel
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(709, 339)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(82, 13)
-        Me.Label6.TabIndex = 15
-        Me.Label6.Text = "Total questions:"
+        Me.TotalQuestLabel.AutoSize = True
+        Me.TotalQuestLabel.Location = New System.Drawing.Point(709, 339)
+        Me.TotalQuestLabel.Name = "TotalQuestLabel"
+        Me.TotalQuestLabel.Size = New System.Drawing.Size(82, 13)
+        Me.TotalQuestLabel.TabIndex = 15
+        Me.TotalQuestLabel.Text = "Total questions:"
         '
-        'Button10
+        'EditTopicButton
         '
-        Me.Button10.Enabled = False
-        Me.Button10.Location = New System.Drawing.Point(124, 373)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(106, 27)
-        Me.Button10.TabIndex = 14
-        Me.Button10.Text = "Edit Topic"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.EditTopicButton.Enabled = False
+        Me.EditTopicButton.Location = New System.Drawing.Point(124, 373)
+        Me.EditTopicButton.Name = "EditTopicButton"
+        Me.EditTopicButton.Size = New System.Drawing.Size(106, 27)
+        Me.EditTopicButton.TabIndex = 14
+        Me.EditTopicButton.Text = "Edit Topic"
+        Me.EditTopicButton.UseVisualStyleBackColor = True
         '
-        'Button9
+        'EditCategoryButton
         '
-        Me.Button9.Enabled = False
-        Me.Button9.Location = New System.Drawing.Point(7, 373)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(109, 27)
-        Me.Button9.TabIndex = 13
-        Me.Button9.Text = "Edit Category"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.EditCategoryButton.Enabled = False
+        Me.EditCategoryButton.Location = New System.Drawing.Point(7, 373)
+        Me.EditCategoryButton.Name = "EditCategoryButton"
+        Me.EditCategoryButton.Size = New System.Drawing.Size(109, 27)
+        Me.EditCategoryButton.TabIndex = 13
+        Me.EditCategoryButton.Text = "Edit Category"
+        Me.EditCategoryButton.UseVisualStyleBackColor = True
         '
-        'questionListView
+        'QuestionListView
         '
-        Me.questionListView.Activation = System.Windows.Forms.ItemActivation.OneClick
-        Me.questionListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.qid, Me.Question, Me.Answer1, Me.Answer2, Me.Answer3, Me.Answer4, Me.Level})
-        Me.questionListView.ContextMenuStrip = Me.ContextMenuStrip2
-        Me.questionListView.GridLines = True
-        Me.questionListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
-        Me.questionListView.HideSelection = False
-        Me.questionListView.Location = New System.Drawing.Point(258, 44)
-        Me.questionListView.MultiSelect = False
-        Me.questionListView.Name = "questionListView"
-        Me.questionListView.Size = New System.Drawing.Size(561, 288)
-        Me.questionListView.TabIndex = 4
-        Me.questionListView.UseCompatibleStateImageBehavior = False
-        Me.questionListView.View = System.Windows.Forms.View.Details
+        Me.QuestionListView.Activation = System.Windows.Forms.ItemActivation.OneClick
+        Me.QuestionListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.qid, Me.Question, Me.Answer1, Me.Answer2, Me.Answer3, Me.Answer4, Me.Level})
+        Me.QuestionListView.ContextMenuStrip = Me.ContextMenuStrip2
+        Me.QuestionListView.GridLines = True
+        Me.QuestionListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
+        Me.QuestionListView.HideSelection = False
+        Me.QuestionListView.Location = New System.Drawing.Point(258, 44)
+        Me.QuestionListView.MultiSelect = False
+        Me.QuestionListView.Name = "QuestionListView"
+        Me.QuestionListView.Size = New System.Drawing.Size(561, 288)
+        Me.QuestionListView.TabIndex = 4
+        Me.QuestionListView.UseCompatibleStateImageBehavior = False
+        Me.QuestionListView.View = System.Windows.Forms.View.Details
         '
         'qid
         '
@@ -330,227 +327,216 @@ Partial Class designer
         Me.DeleteQuestionToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.DeleteQuestionToolStripMenuItem.Text = "Delete Question"
         '
-        'Button7
+        'DeleteQuestionButton
         '
-        Me.Button7.Enabled = False
-        Me.Button7.Location = New System.Drawing.Point(493, 339)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(104, 28)
-        Me.Button7.TabIndex = 12
-        Me.Button7.Text = "Delete Question"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.DeleteQuestionButton.Enabled = False
+        Me.DeleteQuestionButton.Location = New System.Drawing.Point(493, 339)
+        Me.DeleteQuestionButton.Name = "DeleteQuestionButton"
+        Me.DeleteQuestionButton.Size = New System.Drawing.Size(104, 28)
+        Me.DeleteQuestionButton.TabIndex = 12
+        Me.DeleteQuestionButton.Text = "Delete Question"
+        Me.DeleteQuestionButton.UseVisualStyleBackColor = True
         '
-        'Button6
+        'EditQuestionButton
         '
-        Me.Button6.Enabled = False
-        Me.Button6.Location = New System.Drawing.Point(381, 339)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(106, 28)
-        Me.Button6.TabIndex = 11
-        Me.Button6.Text = "Edit Question"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.EditQuestionButton.Enabled = False
+        Me.EditQuestionButton.Location = New System.Drawing.Point(381, 339)
+        Me.EditQuestionButton.Name = "EditQuestionButton"
+        Me.EditQuestionButton.Size = New System.Drawing.Size(106, 28)
+        Me.EditQuestionButton.TabIndex = 11
+        Me.EditQuestionButton.Text = "Edit Question"
+        Me.EditQuestionButton.UseVisualStyleBackColor = True
         '
-        'Button5
+        'NewQuestionButton
         '
-        Me.Button5.Location = New System.Drawing.Point(258, 339)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(117, 28)
-        Me.Button5.TabIndex = 10
-        Me.Button5.Text = "New Question"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.NewQuestionButton.Location = New System.Drawing.Point(258, 339)
+        Me.NewQuestionButton.Name = "NewQuestionButton"
+        Me.NewQuestionButton.Size = New System.Drawing.Size(117, 28)
+        Me.NewQuestionButton.TabIndex = 10
+        Me.NewQuestionButton.Text = "New Question"
+        Me.NewQuestionButton.UseVisualStyleBackColor = True
         '
-        'Label2
+        'QuestionsViewLabel
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(255, 28)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 13)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Questions View"
+        Me.QuestionsViewLabel.AutoSize = True
+        Me.QuestionsViewLabel.Location = New System.Drawing.Point(255, 28)
+        Me.QuestionsViewLabel.Name = "QuestionsViewLabel"
+        Me.QuestionsViewLabel.Size = New System.Drawing.Size(80, 13)
+        Me.QuestionsViewLabel.TabIndex = 9
+        Me.QuestionsViewLabel.Text = "Questions View"
         '
-        'Label1
+        'RepositoryViewLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(83, 13)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Repository View"
+        Me.RepositoryViewLabel.AutoSize = True
+        Me.RepositoryViewLabel.Location = New System.Drawing.Point(6, 28)
+        Me.RepositoryViewLabel.Name = "RepositoryViewLabel"
+        Me.RepositoryViewLabel.Size = New System.Drawing.Size(83, 13)
+        Me.RepositoryViewLabel.TabIndex = 7
+        Me.RepositoryViewLabel.Text = "Repository View"
         '
-        'childclicked
+        'MultiTopListBox
         '
-        Me.childclicked.AutoSize = True
-        Me.childclicked.BackColor = System.Drawing.SystemColors.Info
-        Me.childclicked.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.childclicked.Location = New System.Drawing.Point(1168, 523)
-        Me.childclicked.Name = "childclicked"
-        Me.childclicked.Size = New System.Drawing.Size(21, 15)
-        Me.childclicked.TabIndex = 9
-        Me.childclicked.Text = "    "
+        Me.MultiTopListBox.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.MultiTopListBox.FormattingEnabled = True
+        Me.MultiTopListBox.Location = New System.Drawing.Point(331, 87)
+        Me.MultiTopListBox.Name = "MultiTopListBox"
+        Me.MultiTopListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
+        Me.MultiTopListBox.Size = New System.Drawing.Size(314, 212)
+        Me.MultiTopListBox.TabIndex = 0
         '
-        'multiTopList
+        'TextManagerGroupBox
         '
-        Me.multiTopList.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.multiTopList.FormattingEnabled = True
-        Me.multiTopList.Location = New System.Drawing.Point(331, 87)
-        Me.multiTopList.Name = "multiTopList"
-        Me.multiTopList.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
-        Me.multiTopList.Size = New System.Drawing.Size(314, 212)
-        Me.multiTopList.TabIndex = 0
+        Me.TextManagerGroupBox.Controls.Add(Me.QuestsInTopsValueLabel)
+        Me.TextManagerGroupBox.Controls.Add(Me.QuestsInTopsLabel)
+        Me.TextManagerGroupBox.Controls.Add(Me.SelectNoneButton)
+        Me.TextManagerGroupBox.Controls.Add(Me.SaveButton)
+        Me.TextManagerGroupBox.Controls.Add(Me.TopicsFilterLabel)
+        Me.TextManagerGroupBox.Controls.Add(Me.MultiTopListBox)
+        Me.TextManagerGroupBox.Controls.Add(Me.SelectedTopValueLabel)
+        Me.TextManagerGroupBox.Controls.Add(Me.SelectAllButton)
+        Me.TextManagerGroupBox.Controls.Add(Me.SelectedTopLabel)
+        Me.TextManagerGroupBox.Controls.Add(Me.CategoriesFilterLabel)
+        Me.TextManagerGroupBox.Controls.Add(Me.TotalCategValueLabel)
+        Me.TextManagerGroupBox.Controls.Add(Me.TotalCategLabel)
+        Me.TextManagerGroupBox.Controls.Add(Me.ComplexityGroupBox)
+        Me.TextManagerGroupBox.Controls.Add(Me.MultiCategListBox)
+        Me.TextManagerGroupBox.Controls.Add(Me.HintLabel)
+        Me.TextManagerGroupBox.Location = New System.Drawing.Point(875, 28)
+        Me.TextManagerGroupBox.Name = "TextManagerGroupBox"
+        Me.TextManagerGroupBox.Size = New System.Drawing.Size(660, 450)
+        Me.TextManagerGroupBox.TabIndex = 8
+        Me.TextManagerGroupBox.TabStop = False
+        Me.TextManagerGroupBox.Text = "Test Manager"
         '
-        'GroupBox2
+        'QuestsInTopsValueLabel
         '
-        Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.sNONEbtn)
-        Me.GroupBox2.Controls.Add(Me.SAVEbtn)
-        Me.GroupBox2.Controls.Add(Me.Label15)
-        Me.GroupBox2.Controls.Add(Me.multiTopList)
-        Me.GroupBox2.Controls.Add(Me.Label13)
-        Me.GroupBox2.Controls.Add(Me.sALLbtn)
-        Me.GroupBox2.Controls.Add(Me.Label12)
-        Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.Label10)
-        Me.GroupBox2.Controls.Add(Me.GroupBox5)
-        Me.GroupBox2.Controls.Add(Me.multiCatList)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Location = New System.Drawing.Point(875, 28)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(660, 450)
-        Me.GroupBox2.TabIndex = 8
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Test Manager"
+        Me.QuestsInTopsValueLabel.AutoSize = True
+        Me.QuestsInTopsValueLabel.Location = New System.Drawing.Point(632, 322)
+        Me.QuestsInTopsValueLabel.Name = "QuestsInTopsValueLabel"
+        Me.QuestsInTopsValueLabel.Size = New System.Drawing.Size(13, 13)
+        Me.QuestsInTopsValueLabel.TabIndex = 10
+        Me.QuestsInTopsValueLabel.Text = "0"
         '
-        'Label8
+        'QuestsInTopsLabel
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(632, 322)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(13, 13)
-        Me.Label8.TabIndex = 10
-        Me.Label8.Text = "0"
+        Me.QuestsInTopsLabel.AutoSize = True
+        Me.QuestsInTopsLabel.Location = New System.Drawing.Point(502, 322)
+        Me.QuestsInTopsLabel.Name = "QuestsInTopsLabel"
+        Me.QuestsInTopsLabel.Size = New System.Drawing.Size(109, 13)
+        Me.QuestsInTopsLabel.TabIndex = 9
+        Me.QuestsInTopsLabel.Text = "Questions in Topic(s):"
         '
-        'Label7
+        'SelectNoneButton
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(502, 322)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(109, 13)
-        Me.Label7.TabIndex = 9
-        Me.Label7.Text = "Questions in Topic(s):"
+        Me.SelectNoneButton.Enabled = False
+        Me.SelectNoneButton.Location = New System.Drawing.Point(382, 302)
+        Me.SelectNoneButton.Name = "SelectNoneButton"
+        Me.SelectNoneButton.Size = New System.Drawing.Size(45, 24)
+        Me.SelectNoneButton.TabIndex = 8
+        Me.SelectNoneButton.Text = "&None"
+        Me.SelectNoneButton.UseVisualStyleBackColor = True
         '
-        'sNONEbtn
+        'SaveButton
         '
-        Me.sNONEbtn.Enabled = False
-        Me.sNONEbtn.Location = New System.Drawing.Point(382, 302)
-        Me.sNONEbtn.Name = "sNONEbtn"
-        Me.sNONEbtn.Size = New System.Drawing.Size(45, 24)
-        Me.sNONEbtn.TabIndex = 8
-        Me.sNONEbtn.Text = "&None"
-        Me.sNONEbtn.UseVisualStyleBackColor = True
+        Me.SaveButton.Enabled = False
+        Me.SaveButton.Location = New System.Drawing.Point(433, 301)
+        Me.SaveButton.Name = "SaveButton"
+        Me.SaveButton.Size = New System.Drawing.Size(45, 24)
+        Me.SaveButton.TabIndex = 7
+        Me.SaveButton.Text = "&Save"
+        Me.SaveButton.UseVisualStyleBackColor = True
         '
-        'SAVEbtn
+        'TopicsFilterLabel
         '
-        Me.SAVEbtn.Enabled = False
-        Me.SAVEbtn.Location = New System.Drawing.Point(433, 301)
-        Me.SAVEbtn.Name = "SAVEbtn"
-        Me.SAVEbtn.Size = New System.Drawing.Size(45, 24)
-        Me.SAVEbtn.TabIndex = 7
-        Me.SAVEbtn.Text = "&Save"
-        Me.SAVEbtn.UseVisualStyleBackColor = True
+        Me.TopicsFilterLabel.AutoSize = True
+        Me.TopicsFilterLabel.Location = New System.Drawing.Point(328, 68)
+        Me.TopicsFilterLabel.Name = "TopicsFilterLabel"
+        Me.TopicsFilterLabel.Size = New System.Drawing.Size(64, 13)
+        Me.TopicsFilterLabel.TabIndex = 6
+        Me.TopicsFilterLabel.Text = "Topics Filter"
         '
-        'Label15
+        'SelectedTopValueLabel
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(328, 68)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(64, 13)
-        Me.Label15.TabIndex = 6
-        Me.Label15.Text = "Topics Filter"
+        Me.SelectedTopValueLabel.AutoSize = True
+        Me.SelectedTopValueLabel.Location = New System.Drawing.Point(632, 302)
+        Me.SelectedTopValueLabel.Name = "SelectedTopValueLabel"
+        Me.SelectedTopValueLabel.Size = New System.Drawing.Size(13, 13)
+        Me.SelectedTopValueLabel.TabIndex = 2
+        Me.SelectedTopValueLabel.Text = "0"
         '
-        'Label13
+        'SelectAllButton
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(632, 302)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(13, 13)
-        Me.Label13.TabIndex = 2
-        Me.Label13.Text = "0"
+        Me.SelectAllButton.Enabled = False
+        Me.SelectAllButton.Location = New System.Drawing.Point(331, 302)
+        Me.SelectAllButton.Name = "SelectAllButton"
+        Me.SelectAllButton.Size = New System.Drawing.Size(45, 24)
+        Me.SelectAllButton.TabIndex = 3
+        Me.SelectAllButton.Text = "&All"
+        Me.SelectAllButton.UseVisualStyleBackColor = True
         '
-        'sALLbtn
+        'SelectedTopLabel
         '
-        Me.sALLbtn.Enabled = False
-        Me.sALLbtn.Location = New System.Drawing.Point(331, 302)
-        Me.sALLbtn.Name = "sALLbtn"
-        Me.sALLbtn.Size = New System.Drawing.Size(45, 24)
-        Me.sALLbtn.TabIndex = 3
-        Me.sALLbtn.Text = "&All"
-        Me.sALLbtn.UseVisualStyleBackColor = True
+        Me.SelectedTopLabel.AutoSize = True
+        Me.SelectedTopLabel.Location = New System.Drawing.Point(524, 302)
+        Me.SelectedTopLabel.Name = "SelectedTopLabel"
+        Me.SelectedTopLabel.Size = New System.Drawing.Size(87, 13)
+        Me.SelectedTopLabel.TabIndex = 1
+        Me.SelectedTopLabel.Text = "Selected Topics:"
         '
-        'Label12
+        'CategoriesFilterLabel
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(524, 302)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(87, 13)
-        Me.Label12.TabIndex = 1
-        Me.Label12.Text = "Selected Topics:"
+        Me.CategoriesFilterLabel.AutoSize = True
+        Me.CategoriesFilterLabel.Location = New System.Drawing.Point(6, 68)
+        Me.CategoriesFilterLabel.Name = "CategoriesFilterLabel"
+        Me.CategoriesFilterLabel.Size = New System.Drawing.Size(82, 13)
+        Me.CategoriesFilterLabel.TabIndex = 5
+        Me.CategoriesFilterLabel.Text = "Categories Filter"
         '
-        'Label14
+        'TotalCategValueLabel
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(6, 68)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(82, 13)
-        Me.Label14.TabIndex = 5
-        Me.Label14.Text = "Categories Filter"
+        Me.TotalCategValueLabel.AutoSize = True
+        Me.TotalCategValueLabel.Location = New System.Drawing.Point(303, 301)
+        Me.TotalCategValueLabel.Name = "TotalCategValueLabel"
+        Me.TotalCategValueLabel.Size = New System.Drawing.Size(13, 13)
+        Me.TotalCategValueLabel.TabIndex = 2
+        Me.TotalCategValueLabel.Text = "0"
         '
-        'Label11
+        'TotalCategLabel
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(303, 301)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(13, 13)
-        Me.Label11.TabIndex = 2
-        Me.Label11.Text = "0"
+        Me.TotalCategLabel.AutoSize = True
+        Me.TotalCategLabel.Location = New System.Drawing.Point(193, 301)
+        Me.TotalCategLabel.Name = "TotalCategLabel"
+        Me.TotalCategLabel.Size = New System.Drawing.Size(87, 13)
+        Me.TotalCategLabel.TabIndex = 1
+        Me.TotalCategLabel.Text = "Total Categories:"
         '
-        'Label10
+        'ComplexityGroupBox
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(193, 301)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(87, 13)
-        Me.Label10.TabIndex = 1
-        Me.Label10.Text = "Total Categories:"
+        Me.ComplexityGroupBox.Controls.Add(Me.AnyLvlCheckBox)
+        Me.ComplexityGroupBox.Controls.Add(Me.Label16)
+        Me.ComplexityGroupBox.Controls.Add(Me.GenerateButton)
+        Me.ComplexityGroupBox.Controls.Add(Me.RandomizeCheckBox)
+        Me.ComplexityGroupBox.Controls.Add(Me.LevelTrackBar)
+        Me.ComplexityGroupBox.Controls.Add(Me.LevelLabel)
+        Me.ComplexityGroupBox.Controls.Add(Me.numOfQuestNumBox)
+        Me.ComplexityGroupBox.Controls.Add(Me.NumOfQuestLabel)
+        Me.ComplexityGroupBox.Location = New System.Drawing.Point(9, 349)
+        Me.ComplexityGroupBox.Name = "ComplexityGroupBox"
+        Me.ComplexityGroupBox.Size = New System.Drawing.Size(636, 72)
+        Me.ComplexityGroupBox.TabIndex = 3
+        Me.ComplexityGroupBox.TabStop = False
+        Me.ComplexityGroupBox.Text = "Complexity"
         '
-        'GroupBox5
+        'AnyLvlCheckBox
         '
-        Me.GroupBox5.Controls.Add(Me.anyCHK)
-        Me.GroupBox5.Controls.Add(Me.Label16)
-        Me.GroupBox5.Controls.Add(Me.GENbtn)
-        Me.GroupBox5.Controls.Add(Me.RANDOMIZEchkbox)
-        Me.GroupBox5.Controls.Add(Me.LEVELtrackbar)
-        Me.GroupBox5.Controls.Add(Me.Label5)
-        Me.GroupBox5.Controls.Add(Me.numQbox)
-        Me.GroupBox5.Controls.Add(Me.Label4)
-        Me.GroupBox5.Location = New System.Drawing.Point(9, 349)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(636, 72)
-        Me.GroupBox5.TabIndex = 3
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "Complexity"
-        '
-        'anyCHK
-        '
-        Me.anyCHK.AutoSize = True
-        Me.anyCHK.Location = New System.Drawing.Point(373, 28)
-        Me.anyCHK.Name = "anyCHK"
-        Me.anyCHK.Size = New System.Drawing.Size(73, 17)
-        Me.anyCHK.TabIndex = 10
-        Me.anyCHK.Text = "An&y Level"
-        Me.ToolTip1.SetToolTip(Me.anyCHK, "Selects all levels.")
-        Me.anyCHK.UseVisualStyleBackColor = True
+        Me.AnyLvlCheckBox.AutoSize = True
+        Me.AnyLvlCheckBox.Location = New System.Drawing.Point(373, 28)
+        Me.AnyLvlCheckBox.Name = "AnyLvlCheckBox"
+        Me.AnyLvlCheckBox.Size = New System.Drawing.Size(73, 17)
+        Me.AnyLvlCheckBox.TabIndex = 10
+        Me.AnyLvlCheckBox.Text = "An&y Level"
+        Me.ToolTip1.SetToolTip(Me.AnyLvlCheckBox, "Selects all levels.")
+        Me.AnyLvlCheckBox.UseVisualStyleBackColor = True
         '
         'Label16
         '
@@ -561,105 +547,96 @@ Partial Class designer
         Me.Label16.TabIndex = 9
         Me.Label16.Text = "1"
         '
-        'GENbtn
+        'GenerateButton
         '
-        Me.GENbtn.Enabled = False
-        Me.GENbtn.Location = New System.Drawing.Point(545, 23)
-        Me.GENbtn.Name = "GENbtn"
-        Me.GENbtn.Size = New System.Drawing.Size(76, 26)
-        Me.GENbtn.TabIndex = 6
-        Me.GENbtn.Text = "&Generate"
-        Me.ToolTip1.SetToolTip(Me.GENbtn, "Creates the test and loads it in the Viewer window.")
-        Me.GENbtn.UseVisualStyleBackColor = True
+        Me.GenerateButton.Enabled = False
+        Me.GenerateButton.Location = New System.Drawing.Point(545, 23)
+        Me.GenerateButton.Name = "GenerateButton"
+        Me.GenerateButton.Size = New System.Drawing.Size(76, 26)
+        Me.GenerateButton.TabIndex = 6
+        Me.GenerateButton.Text = "&Generate"
+        Me.ToolTip1.SetToolTip(Me.GenerateButton, "Creates the test and loads it in the Viewer window.")
+        Me.GenerateButton.UseVisualStyleBackColor = True
         '
-        'RANDOMIZEchkbox
+        'RandomizeCheckBox
         '
-        Me.RANDOMIZEchkbox.AutoSize = True
-        Me.RANDOMIZEchkbox.Location = New System.Drawing.Point(460, 29)
-        Me.RANDOMIZEchkbox.Name = "RANDOMIZEchkbox"
-        Me.RANDOMIZEchkbox.Size = New System.Drawing.Size(79, 17)
-        Me.RANDOMIZEchkbox.TabIndex = 5
-        Me.RANDOMIZEchkbox.Text = "&Randomize"
-        Me.ToolTip1.SetToolTip(Me.RANDOMIZEchkbox, "Adds an additional level of difficulty by randomizing the order of the questions." & _
-                "")
-        Me.RANDOMIZEchkbox.UseVisualStyleBackColor = True
+        Me.RandomizeCheckBox.AutoSize = True
+        Me.RandomizeCheckBox.Location = New System.Drawing.Point(460, 29)
+        Me.RandomizeCheckBox.Name = "RandomizeCheckBox"
+        Me.RandomizeCheckBox.Size = New System.Drawing.Size(79, 17)
+        Me.RandomizeCheckBox.TabIndex = 5
+        Me.RandomizeCheckBox.Text = "&Randomize"
+        Me.ToolTip1.SetToolTip(Me.RandomizeCheckBox, "Adds an additional level of difficulty by randomizing the order of the questions." & _
+        "")
+        Me.RandomizeCheckBox.UseVisualStyleBackColor = True
         '
-        'LEVELtrackbar
+        'LevelTrackBar
         '
-        Me.LEVELtrackbar.Location = New System.Drawing.Point(226, 25)
-        Me.LEVELtrackbar.Maximum = 3
-        Me.LEVELtrackbar.Name = "LEVELtrackbar"
-        Me.LEVELtrackbar.Size = New System.Drawing.Size(138, 45)
-        Me.LEVELtrackbar.TabIndex = 3
+        Me.LevelTrackBar.Location = New System.Drawing.Point(226, 25)
+        Me.LevelTrackBar.Maximum = 3
+        Me.LevelTrackBar.Name = "LevelTrackBar"
+        Me.LevelTrackBar.Size = New System.Drawing.Size(138, 45)
+        Me.LevelTrackBar.TabIndex = 3
         '
-        'Label5
+        'LevelLabel
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(184, 29)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(36, 13)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "&Level:"
-        Me.ToolTip1.SetToolTip(Me.Label5, "Sets the difficulty level:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Level 1=Easy" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Level 2=Intermeditate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Level 3 =Advance" & _
-                "d" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Level 4=Expert")
+        Me.LevelLabel.AutoSize = True
+        Me.LevelLabel.Location = New System.Drawing.Point(184, 29)
+        Me.LevelLabel.Name = "LevelLabel"
+        Me.LevelLabel.Size = New System.Drawing.Size(36, 13)
+        Me.LevelLabel.TabIndex = 2
+        Me.LevelLabel.Text = "&Level:"
+        Me.ToolTip1.SetToolTip(Me.LevelLabel, "Sets the difficulty level:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Level 1=Easy" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Level 2=Intermeditate" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Level 3 =Advance" & _
+        "d" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Level 4=Expert")
         '
-        'numQbox
+        'numOfQuestNumBox
         '
-        Me.numQbox.Location = New System.Drawing.Point(119, 25)
-        Me.numQbox.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.numQbox.Name = "numQbox"
-        Me.numQbox.Size = New System.Drawing.Size(49, 20)
-        Me.numQbox.TabIndex = 1
-        Me.numQbox.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numOfQuestNumBox.Location = New System.Drawing.Point(119, 25)
+        Me.numOfQuestNumBox.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.numOfQuestNumBox.Name = "numOfQuestNumBox"
+        Me.numOfQuestNumBox.Size = New System.Drawing.Size(49, 20)
+        Me.numOfQuestNumBox.TabIndex = 1
+        Me.numOfQuestNumBox.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
-        'Label4
+        'NumOfQuestLabel
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 30)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(107, 13)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "&Number of questions:"
-        Me.ToolTip1.SetToolTip(Me.Label4, "Sets the number of questions to be loaded into the test.")
+        Me.NumOfQuestLabel.AutoSize = True
+        Me.NumOfQuestLabel.Location = New System.Drawing.Point(6, 30)
+        Me.NumOfQuestLabel.Name = "NumOfQuestLabel"
+        Me.NumOfQuestLabel.Size = New System.Drawing.Size(107, 13)
+        Me.NumOfQuestLabel.TabIndex = 0
+        Me.NumOfQuestLabel.Text = "&Number of questions:"
+        Me.ToolTip1.SetToolTip(Me.NumOfQuestLabel, "Sets the number of questions to be loaded into the test.")
         '
-        'multiCatList
+        'MultiCategListBox
         '
-        Me.multiCatList.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.multiCatList.FormattingEnabled = True
-        Me.multiCatList.Location = New System.Drawing.Point(9, 84)
-        Me.multiCatList.Name = "multiCatList"
-        Me.multiCatList.Size = New System.Drawing.Size(307, 212)
-        Me.multiCatList.TabIndex = 0
+        Me.MultiCategListBox.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.MultiCategListBox.FormattingEnabled = True
+        Me.MultiCategListBox.Location = New System.Drawing.Point(9, 84)
+        Me.MultiCategListBox.Name = "MultiCategListBox"
+        Me.MultiCategListBox.Size = New System.Drawing.Size(307, 212)
+        Me.MultiCategListBox.TabIndex = 0
         '
-        'Label3
+        'HintLabel
         '
-        Me.Label3.BackColor = System.Drawing.SystemColors.Info
-        Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label3.Location = New System.Drawing.Point(9, 27)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(636, 31)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Hint: To create a new test, [1] select a category, [2] one or more topics and [3]" & _
-            " complexity parameters. Press the Generate button to view and print the test. Ho" & _
-            "ver on each option for more info."
+        Me.HintLabel.BackColor = System.Drawing.SystemColors.Info
+        Me.HintLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.HintLabel.Location = New System.Drawing.Point(9, 27)
+        Me.HintLabel.Name = "HintLabel"
+        Me.HintLabel.Size = New System.Drawing.Size(636, 31)
+        Me.HintLabel.TabIndex = 1
+        Me.HintLabel.Text = "Hint: To create a new test, [1] select a category, [2] one or more topics and [3]" & _
+    " complexity parameters. Press the Generate button to view and print the test. Ho" & _
+    "ver on each option for more info."
         '
-        'ReloadBtn
+        'MenuStrip
         '
-        Me.ReloadBtn.Location = New System.Drawing.Point(875, 518)
-        Me.ReloadBtn.Name = "ReloadBtn"
-        Me.ReloadBtn.Size = New System.Drawing.Size(27, 22)
-        Me.ReloadBtn.TabIndex = 17
-        Me.ReloadBtn.Text = "R"
-        Me.ReloadBtn.UseVisualStyleBackColor = True
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.CategoryToolStripMenuItem, Me.TopicToolStripMenuItem, Me.QuestionToolStripMenuItem, Me.HelpToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1547, 24)
-        Me.MenuStrip1.TabIndex = 18
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.CategoryToolStripMenuItem, Me.TopicToolStripMenuItem, Me.QuestionToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip.Name = "MenuStrip"
+        Me.MenuStrip.Size = New System.Drawing.Size(1547, 24)
+        Me.MenuStrip.TabIndex = 18
+        Me.MenuStrip.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem
         '
@@ -775,41 +752,31 @@ Partial Class designer
         Me.AboutToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.AboutToolStripMenuItem1.Text = "About"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(908, 520)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(254, 20)
-        Me.TextBox1.TabIndex = 9
-        '
         'designer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1547, 493)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.ReloadBtn)
-        Me.Controls.Add(Me.childclicked)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.MenuStrip)
+        Me.Controls.Add(Me.ReposManagGroupBox)
+        Me.Controls.Add(Me.TextManagerGroupBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.MaximizeBox = False
         Me.Name = "designer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ExamDesigner"
         Me.ContextMenuStrip1.ResumeLayout(False)
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.ReposManagGroupBox.ResumeLayout(False)
+        Me.ReposManagGroupBox.PerformLayout()
         Me.ContextMenuStrip2.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
-        CType(Me.LEVELtrackbar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.numQbox, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.TextManagerGroupBox.ResumeLayout(False)
+        Me.TextManagerGroupBox.PerformLayout()
+        Me.ComplexityGroupBox.ResumeLayout(False)
+        Me.ComplexityGroupBox.PerformLayout()
+        CType(Me.LevelTrackBar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numOfQuestNumBox, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip.ResumeLayout(False)
+        Me.MenuStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -819,61 +786,59 @@ Partial Class designer
     Friend WithEvents NewTopicToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteCategoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteTopicToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents NewTopicButton As System.Windows.Forms.Button
+    Friend WithEvents DeleteCategoryButton As System.Windows.Forms.Button
+    Friend WithEvents NewCategoryButton As System.Windows.Forms.Button
     Friend WithEvents TreeView1 As System.Windows.Forms.TreeView
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents DeleteTopicButton As System.Windows.Forms.Button
+    Friend WithEvents ReposManagGroupBox As System.Windows.Forms.GroupBox
+    Friend WithEvents QuestionsViewLabel As System.Windows.Forms.Label
+    Friend WithEvents RepositoryViewLabel As System.Windows.Forms.Label
+    Friend WithEvents DeleteQuestionButton As System.Windows.Forms.Button
+    Friend WithEvents EditQuestionButton As System.Windows.Forms.Button
+    Friend WithEvents NewQuestionButton As System.Windows.Forms.Button
+    Friend WithEvents TextManagerGroupBox As System.Windows.Forms.GroupBox
     Friend WithEvents ContextMenuStrip2 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents NewQuestionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeleteQuestionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents questionListView As System.Windows.Forms.ListView
+    Friend WithEvents HintLabel As System.Windows.Forms.Label
+    Friend WithEvents QuestionListView As System.Windows.Forms.ListView
     Friend WithEvents Question As System.Windows.Forms.ColumnHeader
     Friend WithEvents Answer1 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents ComplexityGroupBox As System.Windows.Forms.GroupBox
+    Friend WithEvents NumOfQuestLabel As System.Windows.Forms.Label
     Friend WithEvents Answer2 As System.Windows.Forms.ColumnHeader
     Friend WithEvents Answer3 As System.Windows.Forms.ColumnHeader
     Friend WithEvents Answer4 As System.Windows.Forms.ColumnHeader
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents numQbox As System.Windows.Forms.NumericUpDown
-    Friend WithEvents RANDOMIZEchkbox As System.Windows.Forms.CheckBox
-    Friend WithEvents LEVELtrackbar As System.Windows.Forms.TrackBar
-    Friend WithEvents GENbtn As System.Windows.Forms.Button
+    Friend WithEvents LevelLabel As System.Windows.Forms.Label
+    Friend WithEvents numOfQuestNumBox As System.Windows.Forms.NumericUpDown
+    Friend WithEvents RandomizeCheckBox As System.Windows.Forms.CheckBox
+    Friend WithEvents LevelTrackBar As System.Windows.Forms.TrackBar
+    Friend WithEvents GenerateButton As System.Windows.Forms.Button
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
     Friend WithEvents CategoriesBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents childclicked As System.Windows.Forms.Label
-    Friend WithEvents Button10 As System.Windows.Forms.Button
-    Friend WithEvents Button9 As System.Windows.Forms.Button
-    Friend WithEvents multiCatList As System.Windows.Forms.ListBox
-    Friend WithEvents multiTopList As System.Windows.Forms.ListBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents EditTopicButton As System.Windows.Forms.Button
+    Friend WithEvents EditCategoryButton As System.Windows.Forms.Button
+    Friend WithEvents MultiCategListBox As System.Windows.Forms.ListBox
+    Friend WithEvents MultiTopListBox As System.Windows.Forms.ListBox
+    Friend WithEvents TotalQuestValueLabel As System.Windows.Forms.Label
+    Friend WithEvents TotalQuestLabel As System.Windows.Forms.Label
     Friend WithEvents Level As System.Windows.Forms.ColumnHeader
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents ReloadBtn As System.Windows.Forms.Button
-    Friend WithEvents sALLbtn As System.Windows.Forms.Button
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents SAVEbtn As System.Windows.Forms.Button
-    Friend WithEvents sNONEbtn As System.Windows.Forms.Button
+    Friend WithEvents SelectedTopValueLabel As System.Windows.Forms.Label
+    Friend WithEvents SelectedTopLabel As System.Windows.Forms.Label
+    Friend WithEvents TotalCategValueLabel As System.Windows.Forms.Label
+    Friend WithEvents TotalCategLabel As System.Windows.Forms.Label
+    Friend WithEvents SelectAllButton As System.Windows.Forms.Button
+    Friend WithEvents CategoriesFilterLabel As System.Windows.Forms.Label
+    Friend WithEvents TopicsFilterLabel As System.Windows.Forms.Label
+    Friend WithEvents SaveButton As System.Windows.Forms.Button
+    Friend WithEvents SelectNoneButton As System.Windows.Forms.Button
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents qid As System.Windows.Forms.ColumnHeader
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
-    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents MenuStrip As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CategoryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -891,10 +856,9 @@ Partial Class designer
     Friend WithEvents HelpToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MaintenanceToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents anyCHK As System.Windows.Forms.CheckBox
+    Friend WithEvents QuestsInTopsValueLabel As System.Windows.Forms.Label
+    Friend WithEvents QuestsInTopsLabel As System.Windows.Forms.Label
+    Friend WithEvents AnyLvlCheckBox As System.Windows.Forms.CheckBox
 
 
 

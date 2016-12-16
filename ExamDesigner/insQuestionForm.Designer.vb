@@ -22,188 +22,188 @@ Partial Class insQuestionForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.qRichTxtBox = New System.Windows.Forms.RichTextBox
-        Me.OKbutton = New System.Windows.Forms.Button
-        Me.CancelButton = New System.Windows.Forms.Button
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.o1RichTxtBox = New System.Windows.Forms.RichTextBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.o2RichTxtBox = New System.Windows.Forms.RichTextBox
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.o3RichTxtBox = New System.Windows.Forms.RichTextBox
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.o4RichTxtBox = New System.Windows.Forms.RichTextBox
-        Me.categoryCombo1 = New System.Windows.Forms.ComboBox
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.topicsCombo = New System.Windows.Forms.ComboBox
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.levelCombo = New System.Windows.Forms.ComboBox
+        Me.QuestionTextLabel = New System.Windows.Forms.Label()
+        Me.QuestionRichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.OKInsQuestButton = New System.Windows.Forms.Button()
+        Me.CancelInsQuestButton = New System.Windows.Forms.Button()
+        Me.Answer1Label = New System.Windows.Forms.Label()
+        Me.Answer1RichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.Answer2Label = New System.Windows.Forms.Label()
+        Me.Answer2RichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.Answer3Label = New System.Windows.Forms.Label()
+        Me.Answer3RichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.Answer4Label = New System.Windows.Forms.Label()
+        Me.Answer4RichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.QuesCategoryComboBox = New System.Windows.Forms.ComboBox()
+        Me.CategoryLabel = New System.Windows.Forms.Label()
+        Me.TopicLabel = New System.Windows.Forms.Label()
+        Me.TopicComboBox = New System.Windows.Forms.ComboBox()
+        Me.LevelLabel = New System.Windows.Forms.Label()
+        Me.LevelComboBox = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
-        'Label1
+        'QuestionTextLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 64)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Queston Text:"
+        Me.QuestionTextLabel.AutoSize = True
+        Me.QuestionTextLabel.Location = New System.Drawing.Point(12, 64)
+        Me.QuestionTextLabel.Name = "QuestionTextLabel"
+        Me.QuestionTextLabel.Size = New System.Drawing.Size(74, 13)
+        Me.QuestionTextLabel.TabIndex = 0
+        Me.QuestionTextLabel.Text = "Queston Text:"
         '
-        'qRichTxtBox
+        'QuestionRichTextBox
         '
-        Me.qRichTxtBox.Enabled = False
-        Me.qRichTxtBox.Location = New System.Drawing.Point(15, 80)
-        Me.qRichTxtBox.Name = "qRichTxtBox"
-        Me.qRichTxtBox.Size = New System.Drawing.Size(651, 104)
-        Me.qRichTxtBox.TabIndex = 1
-        Me.qRichTxtBox.Text = ""
+        Me.QuestionRichTextBox.Enabled = False
+        Me.QuestionRichTextBox.Location = New System.Drawing.Point(15, 80)
+        Me.QuestionRichTextBox.Name = "QuestionRichTextBox"
+        Me.QuestionRichTextBox.Size = New System.Drawing.Size(651, 104)
+        Me.QuestionRichTextBox.TabIndex = 1
+        Me.QuestionRichTextBox.Text = ""
         '
-        'OKbutton
+        'OKInsQuestButton
         '
-        Me.OKbutton.Enabled = False
-        Me.OKbutton.Location = New System.Drawing.Point(500, 454)
-        Me.OKbutton.Name = "OKbutton"
-        Me.OKbutton.Size = New System.Drawing.Size(80, 31)
-        Me.OKbutton.TabIndex = 2
-        Me.OKbutton.Text = "&OK"
-        Me.OKbutton.UseVisualStyleBackColor = True
+        Me.OKInsQuestButton.Enabled = False
+        Me.OKInsQuestButton.Location = New System.Drawing.Point(500, 454)
+        Me.OKInsQuestButton.Name = "OKInsQuestButton"
+        Me.OKInsQuestButton.Size = New System.Drawing.Size(80, 31)
+        Me.OKInsQuestButton.TabIndex = 2
+        Me.OKInsQuestButton.Text = "&OK"
+        Me.OKInsQuestButton.UseVisualStyleBackColor = True
         '
-        'CancelButton
+        'CancelInsQuestButton
         '
-        Me.CancelButton.Location = New System.Drawing.Point(585, 454)
-        Me.CancelButton.Name = "CancelButton"
-        Me.CancelButton.Size = New System.Drawing.Size(80, 31)
-        Me.CancelButton.TabIndex = 3
-        Me.CancelButton.Text = "&Cancel"
-        Me.CancelButton.UseVisualStyleBackColor = True
+        Me.CancelInsQuestButton.Location = New System.Drawing.Point(585, 454)
+        Me.CancelInsQuestButton.Name = "CancelInsQuestButton"
+        Me.CancelInsQuestButton.Size = New System.Drawing.Size(80, 31)
+        Me.CancelInsQuestButton.TabIndex = 3
+        Me.CancelInsQuestButton.Text = "&Cancel"
+        Me.CancelInsQuestButton.UseVisualStyleBackColor = True
         '
-        'Label2
+        'Answer1Label
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 198)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 13)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Answer 1"
+        Me.Answer1Label.AutoSize = True
+        Me.Answer1Label.Location = New System.Drawing.Point(12, 198)
+        Me.Answer1Label.Name = "Answer1Label"
+        Me.Answer1Label.Size = New System.Drawing.Size(51, 13)
+        Me.Answer1Label.TabIndex = 5
+        Me.Answer1Label.Text = "Answer 1"
         '
-        'o1RichTxtBox
+        'Answer1RichTextBox
         '
-        Me.o1RichTxtBox.Enabled = False
-        Me.o1RichTxtBox.Location = New System.Drawing.Point(15, 214)
-        Me.o1RichTxtBox.Name = "o1RichTxtBox"
-        Me.o1RichTxtBox.Size = New System.Drawing.Size(650, 30)
-        Me.o1RichTxtBox.TabIndex = 6
-        Me.o1RichTxtBox.Text = ""
+        Me.Answer1RichTextBox.Enabled = False
+        Me.Answer1RichTextBox.Location = New System.Drawing.Point(15, 214)
+        Me.Answer1RichTextBox.Name = "Answer1RichTextBox"
+        Me.Answer1RichTextBox.Size = New System.Drawing.Size(650, 30)
+        Me.Answer1RichTextBox.TabIndex = 6
+        Me.Answer1RichTextBox.Text = ""
         '
-        'Label3
+        'Answer2Label
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 267)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 13)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Answer 2"
+        Me.Answer2Label.AutoSize = True
+        Me.Answer2Label.Location = New System.Drawing.Point(12, 267)
+        Me.Answer2Label.Name = "Answer2Label"
+        Me.Answer2Label.Size = New System.Drawing.Size(51, 13)
+        Me.Answer2Label.TabIndex = 7
+        Me.Answer2Label.Text = "Answer 2"
         '
-        'o2RichTxtBox
+        'Answer2RichTextBox
         '
-        Me.o2RichTxtBox.Enabled = False
-        Me.o2RichTxtBox.Location = New System.Drawing.Point(15, 283)
-        Me.o2RichTxtBox.Name = "o2RichTxtBox"
-        Me.o2RichTxtBox.Size = New System.Drawing.Size(650, 30)
-        Me.o2RichTxtBox.TabIndex = 8
-        Me.o2RichTxtBox.Text = ""
+        Me.Answer2RichTextBox.Enabled = False
+        Me.Answer2RichTextBox.Location = New System.Drawing.Point(15, 283)
+        Me.Answer2RichTextBox.Name = "Answer2RichTextBox"
+        Me.Answer2RichTextBox.Size = New System.Drawing.Size(650, 30)
+        Me.Answer2RichTextBox.TabIndex = 8
+        Me.Answer2RichTextBox.Text = ""
         '
-        'Label4
+        'Answer3Label
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 331)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(51, 13)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Answer 3"
+        Me.Answer3Label.AutoSize = True
+        Me.Answer3Label.Location = New System.Drawing.Point(12, 331)
+        Me.Answer3Label.Name = "Answer3Label"
+        Me.Answer3Label.Size = New System.Drawing.Size(51, 13)
+        Me.Answer3Label.TabIndex = 9
+        Me.Answer3Label.Text = "Answer 3"
         '
-        'o3RichTxtBox
+        'Answer3RichTextBox
         '
-        Me.o3RichTxtBox.Enabled = False
-        Me.o3RichTxtBox.Location = New System.Drawing.Point(15, 347)
-        Me.o3RichTxtBox.Name = "o3RichTxtBox"
-        Me.o3RichTxtBox.Size = New System.Drawing.Size(650, 30)
-        Me.o3RichTxtBox.TabIndex = 10
-        Me.o3RichTxtBox.Text = ""
+        Me.Answer3RichTextBox.Enabled = False
+        Me.Answer3RichTextBox.Location = New System.Drawing.Point(15, 347)
+        Me.Answer3RichTextBox.Name = "Answer3RichTextBox"
+        Me.Answer3RichTextBox.Size = New System.Drawing.Size(650, 30)
+        Me.Answer3RichTextBox.TabIndex = 10
+        Me.Answer3RichTextBox.Text = ""
         '
-        'Label5
+        'Answer4Label
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 392)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(51, 13)
-        Me.Label5.TabIndex = 11
-        Me.Label5.Text = "Answer 4"
+        Me.Answer4Label.AutoSize = True
+        Me.Answer4Label.Location = New System.Drawing.Point(12, 392)
+        Me.Answer4Label.Name = "Answer4Label"
+        Me.Answer4Label.Size = New System.Drawing.Size(51, 13)
+        Me.Answer4Label.TabIndex = 11
+        Me.Answer4Label.Text = "Answer 4"
         '
-        'o4RichTxtBox
+        'Answer4RichTextBox
         '
-        Me.o4RichTxtBox.Enabled = False
-        Me.o4RichTxtBox.Location = New System.Drawing.Point(15, 408)
-        Me.o4RichTxtBox.Name = "o4RichTxtBox"
-        Me.o4RichTxtBox.Size = New System.Drawing.Size(650, 30)
-        Me.o4RichTxtBox.TabIndex = 12
-        Me.o4RichTxtBox.Text = ""
+        Me.Answer4RichTextBox.Enabled = False
+        Me.Answer4RichTextBox.Location = New System.Drawing.Point(15, 408)
+        Me.Answer4RichTextBox.Name = "Answer4RichTextBox"
+        Me.Answer4RichTextBox.Size = New System.Drawing.Size(650, 30)
+        Me.Answer4RichTextBox.TabIndex = 12
+        Me.Answer4RichTextBox.Text = ""
         '
-        'categoryCombo1
+        'QuesCategoryComboBox
         '
-        Me.categoryCombo1.FormattingEnabled = True
-        Me.categoryCombo1.Location = New System.Drawing.Point(12, 29)
-        Me.categoryCombo1.Name = "categoryCombo1"
-        Me.categoryCombo1.Size = New System.Drawing.Size(181, 21)
-        Me.categoryCombo1.TabIndex = 13
+        Me.QuesCategoryComboBox.FormattingEnabled = True
+        Me.QuesCategoryComboBox.Location = New System.Drawing.Point(12, 29)
+        Me.QuesCategoryComboBox.Name = "QuesCategoryComboBox"
+        Me.QuesCategoryComboBox.Size = New System.Drawing.Size(181, 21)
+        Me.QuesCategoryComboBox.TabIndex = 13
         '
-        'Label6
+        'CategoryLabel
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 13)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(52, 13)
-        Me.Label6.TabIndex = 14
-        Me.Label6.Text = "Category:"
+        Me.CategoryLabel.AutoSize = True
+        Me.CategoryLabel.Location = New System.Drawing.Point(12, 13)
+        Me.CategoryLabel.Name = "CategoryLabel"
+        Me.CategoryLabel.Size = New System.Drawing.Size(52, 13)
+        Me.CategoryLabel.TabIndex = 14
+        Me.CategoryLabel.Text = "Category:"
         '
-        'Label7
+        'TopicLabel
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(209, 13)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(37, 13)
-        Me.Label7.TabIndex = 15
-        Me.Label7.Text = "Topic:"
+        Me.TopicLabel.AutoSize = True
+        Me.TopicLabel.Location = New System.Drawing.Point(209, 13)
+        Me.TopicLabel.Name = "TopicLabel"
+        Me.TopicLabel.Size = New System.Drawing.Size(37, 13)
+        Me.TopicLabel.TabIndex = 15
+        Me.TopicLabel.Text = "Topic:"
         '
-        'topicsCombo
+        'TopicComboBox
         '
-        Me.topicsCombo.Enabled = False
-        Me.topicsCombo.FormattingEnabled = True
-        Me.topicsCombo.Location = New System.Drawing.Point(212, 29)
-        Me.topicsCombo.Name = "topicsCombo"
-        Me.topicsCombo.Size = New System.Drawing.Size(181, 21)
-        Me.topicsCombo.TabIndex = 16
+        Me.TopicComboBox.Enabled = False
+        Me.TopicComboBox.FormattingEnabled = True
+        Me.TopicComboBox.Location = New System.Drawing.Point(212, 29)
+        Me.TopicComboBox.Name = "TopicComboBox"
+        Me.TopicComboBox.Size = New System.Drawing.Size(181, 21)
+        Me.TopicComboBox.TabIndex = 16
         '
-        'Label8
+        'LevelLabel
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(411, 13)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(36, 13)
-        Me.Label8.TabIndex = 17
-        Me.Label8.Text = "Level:"
+        Me.LevelLabel.AutoSize = True
+        Me.LevelLabel.Location = New System.Drawing.Point(411, 13)
+        Me.LevelLabel.Name = "LevelLabel"
+        Me.LevelLabel.Size = New System.Drawing.Size(36, 13)
+        Me.LevelLabel.TabIndex = 17
+        Me.LevelLabel.Text = "Level:"
         '
-        'levelCombo
+        'LevelComboBox
         '
-        Me.levelCombo.Enabled = False
-        Me.levelCombo.FormattingEnabled = True
-        Me.levelCombo.Items.AddRange(New Object() {"1", "2", "3", "4"})
-        Me.levelCombo.Location = New System.Drawing.Point(414, 29)
-        Me.levelCombo.Name = "levelCombo"
-        Me.levelCombo.Size = New System.Drawing.Size(53, 21)
-        Me.levelCombo.TabIndex = 18
+        Me.LevelComboBox.Enabled = False
+        Me.LevelComboBox.FormattingEnabled = True
+        Me.LevelComboBox.Items.AddRange(New Object() {"1", "2", "3", "4"})
+        Me.LevelComboBox.Location = New System.Drawing.Point(414, 29)
+        Me.LevelComboBox.Name = "LevelComboBox"
+        Me.LevelComboBox.Size = New System.Drawing.Size(53, 21)
+        Me.LevelComboBox.TabIndex = 18
         '
         'insQuestionForm
         '
@@ -211,24 +211,24 @@ Partial Class insQuestionForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(678, 497)
         Me.ControlBox = False
-        Me.Controls.Add(Me.levelCombo)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.topicsCombo)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.categoryCombo1)
-        Me.Controls.Add(Me.o4RichTxtBox)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.o3RichTxtBox)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.o2RichTxtBox)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.o1RichTxtBox)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.CancelButton)
-        Me.Controls.Add(Me.OKbutton)
-        Me.Controls.Add(Me.qRichTxtBox)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.LevelComboBox)
+        Me.Controls.Add(Me.LevelLabel)
+        Me.Controls.Add(Me.TopicComboBox)
+        Me.Controls.Add(Me.TopicLabel)
+        Me.Controls.Add(Me.CategoryLabel)
+        Me.Controls.Add(Me.QuesCategoryComboBox)
+        Me.Controls.Add(Me.Answer4RichTextBox)
+        Me.Controls.Add(Me.Answer4Label)
+        Me.Controls.Add(Me.Answer3RichTextBox)
+        Me.Controls.Add(Me.Answer3Label)
+        Me.Controls.Add(Me.Answer2RichTextBox)
+        Me.Controls.Add(Me.Answer2Label)
+        Me.Controls.Add(Me.Answer1RichTextBox)
+        Me.Controls.Add(Me.Answer1Label)
+        Me.Controls.Add(Me.CancelInsQuestButton)
+        Me.Controls.Add(Me.OKInsQuestButton)
+        Me.Controls.Add(Me.QuestionRichTextBox)
+        Me.Controls.Add(Me.QuestionTextLabel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
         Me.Name = "insQuestionForm"
@@ -240,22 +240,22 @@ Partial Class insQuestionForm
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents qRichTxtBox As System.Windows.Forms.RichTextBox
-    Friend WithEvents OKbutton As System.Windows.Forms.Button
-    Friend WithEvents CancelButton As System.Windows.Forms.Button
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents o1RichTxtBox As System.Windows.Forms.RichTextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents o2RichTxtBox As System.Windows.Forms.RichTextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents o3RichTxtBox As System.Windows.Forms.RichTextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents o4RichTxtBox As System.Windows.Forms.RichTextBox
-    Friend WithEvents categoryCombo1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents topicsCombo As System.Windows.Forms.ComboBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents levelCombo As System.Windows.Forms.ComboBox
+    Friend WithEvents QuestionTextLabel As System.Windows.Forms.Label
+    Friend WithEvents QuestionRichTextBox As System.Windows.Forms.RichTextBox
+    Friend WithEvents OKInsQuestButton As System.Windows.Forms.Button
+    Friend WithEvents CancelInsQuestButton As System.Windows.Forms.Button
+    Friend WithEvents Answer1Label As System.Windows.Forms.Label
+    Friend WithEvents Answer1RichTextBox As System.Windows.Forms.RichTextBox
+    Friend WithEvents Answer2Label As System.Windows.Forms.Label
+    Friend WithEvents Answer2RichTextBox As System.Windows.Forms.RichTextBox
+    Friend WithEvents Answer3Label As System.Windows.Forms.Label
+    Friend WithEvents Answer3RichTextBox As System.Windows.Forms.RichTextBox
+    Friend WithEvents Answer4Label As System.Windows.Forms.Label
+    Friend WithEvents Answer4RichTextBox As System.Windows.Forms.RichTextBox
+    Friend WithEvents QuesCategoryComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents CategoryLabel As System.Windows.Forms.Label
+    Friend WithEvents TopicLabel As System.Windows.Forms.Label
+    Friend WithEvents TopicComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents LevelLabel As System.Windows.Forms.Label
+    Friend WithEvents LevelComboBox As System.Windows.Forms.ComboBox
 End Class

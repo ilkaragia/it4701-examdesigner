@@ -23,12 +23,12 @@ Partial Class viewer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(viewer))
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser
-        Me.viewerMenu = New System.Windows.Forms.ToolStrip
-        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog
-        Me.prntBtn = New System.Windows.Forms.ToolStripButton
-        Me.savBtn = New System.Windows.Forms.ToolStripButton
-        Me.xBtn = New System.Windows.Forms.ToolStripButton
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.viewerMenu = New System.Windows.Forms.ToolStrip()
+        Me.PrintToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.SaveToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.CloseToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.viewerMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,43 +45,43 @@ Partial Class viewer
         '
         'viewerMenu
         '
-        Me.viewerMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.prntBtn, Me.savBtn, Me.xBtn})
+        Me.viewerMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PrintToolStripButton, Me.SaveToolStripButton, Me.CloseToolStripButton})
         Me.viewerMenu.Location = New System.Drawing.Point(0, 0)
         Me.viewerMenu.Name = "viewerMenu"
         Me.viewerMenu.Size = New System.Drawing.Size(1011, 25)
         Me.viewerMenu.TabIndex = 4
         Me.viewerMenu.Text = "ToolStrip1"
         '
+        'PrintToolStripButton
+        '
+        Me.PrintToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.PrintToolStripButton.Image = CType(resources.GetObject("PrintToolStripButton.Image"), System.Drawing.Image)
+        Me.PrintToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.PrintToolStripButton.Name = "PrintToolStripButton"
+        Me.PrintToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.PrintToolStripButton.Text = "Print Test"
+        '
+        'SaveToolStripButton
+        '
+        Me.SaveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.SaveToolStripButton.Image = CType(resources.GetObject("SaveToolStripButton.Image"), System.Drawing.Image)
+        Me.SaveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.SaveToolStripButton.Name = "SaveToolStripButton"
+        Me.SaveToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.SaveToolStripButton.Text = "ToolStripButton1"
+        Me.SaveToolStripButton.ToolTipText = "Save Test"
+        '
+        'CloseToolStripButton
+        '
+        Me.CloseToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.CloseToolStripButton.Image = Global.ExamDesigner.My.Resources.Resources.DeleteRed
+        Me.CloseToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.CloseToolStripButton.Name = "CloseToolStripButton"
+        Me.CloseToolStripButton.Size = New System.Drawing.Size(23, 22)
+        Me.CloseToolStripButton.Text = "Close"
+        '
         'SaveFileDialog1
         '
-        '
-        'prntBtn
-        '
-        Me.prntBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.prntBtn.Image = Global.ExamDesigner.My.Resources.Resources._2000px_Print_font_awesome_svg
-        Me.prntBtn.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.prntBtn.Name = "prntBtn"
-        Me.prntBtn.Size = New System.Drawing.Size(23, 22)
-        Me.prntBtn.Text = "Print Test"
-        '
-        'savBtn
-        '
-        Me.savBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.savBtn.Image = CType(resources.GetObject("savBtn.Image"), System.Drawing.Image)
-        Me.savBtn.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.savBtn.Name = "savBtn"
-        Me.savBtn.Size = New System.Drawing.Size(23, 22)
-        Me.savBtn.Text = "ToolStripButton1"
-        Me.savBtn.ToolTipText = "Save Test"
-        '
-        'xBtn
-        '
-        Me.xBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.xBtn.Image = Global.ExamDesigner.My.Resources.Resources.DeleteRed
-        Me.xBtn.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.xBtn.Name = "xBtn"
-        Me.xBtn.Size = New System.Drawing.Size(23, 22)
-        Me.xBtn.Text = "Close"
         '
         'viewer
         '
@@ -107,8 +107,8 @@ Partial Class viewer
     End Sub
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
     Friend WithEvents viewerMenu As System.Windows.Forms.ToolStrip
-    Friend WithEvents prntBtn As System.Windows.Forms.ToolStripButton
-    Friend WithEvents savBtn As System.Windows.Forms.ToolStripButton
+    Friend WithEvents PrintToolStripButton As System.Windows.Forms.ToolStripButton
+    Friend WithEvents SaveToolStripButton As System.Windows.Forms.ToolStripButton
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
-    Friend WithEvents xBtn As System.Windows.Forms.ToolStripButton
+    Friend WithEvents CloseToolStripButton As System.Windows.Forms.ToolStripButton
 End Class

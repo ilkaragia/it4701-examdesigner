@@ -9,6 +9,8 @@ Public Class designer
     Public myCmd, myCmd2, myFilteredCmd, myFinalCmd, myClearFinalCmd As SqlCommand
     Public myReader, myReader9 As SqlDataReader
     Public results As String
+    Friend categoriesSelected As String
+    Friend childClickedName As String
 
     Private Sub EditToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditToolStripMenuItem.Click
         insCategoryForm.Show()
@@ -22,19 +24,19 @@ Public Class designer
         insQuestionForm.Show()
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub NewTopicButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewTopicButton.Click
         insTopicForm.Show()
     End Sub
 
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+    Private Sub NewQuestionButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewQuestionButton.Click
         insQuestionForm.Show()
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub NewCategoryButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewCategoryButton.Click
         insCategoryForm.Show()
     End Sub
 
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GENbtn.Click
+    Private Sub GenerateButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GenerateButton.Click
         viewer.Cursor = Cursors.WaitCursor
 
         myCmd = myConn.CreateCommand
@@ -49,14 +51,14 @@ Public Class designer
         results = ""
         myFilteredCmd = myConn.CreateCommand
 
-        If RANDOMIZEchkbox.Checked = True And anyCHK.Enabled = True Then
-            myFilteredCmd.CommandText = "SELECT TOP " & numQbox.Value & " txt,opta,optb,optc,optd FROM questions WHERE tid in(select tid from topics where name in(SELECT txt FROM tmpq)) ORDER BY newid()"
-        ElseIf RANDOMIZEchkbox.Checked = True And anyCHK.Enabled = False Then
-            myFilteredCmd.CommandText = "SELECT TOP " & numQbox.Value & " txt,opta,optb,optc,optd FROM questions WHERE tid in(select tid from topics where name in(SELECT txt FROM tmpq)) AND level=" & LEVELtrackbar.Value + 1 & " ORDER BY newid()"
-        ElseIf RANDOMIZEchkbox.Checked = False And anyCHK.Enabled = True Then
-            myFilteredCmd.CommandText = "SELECT TOP " & numQbox.Value & " txt,opta,optb,optc,optd FROM questions WHERE tid in(select tid from topics where name in(SELECT txt FROM tmpq))"
-        ElseIf RANDOMIZEchkbox.Checked = False And anyCHK.Enabled = False Then
-            myFilteredCmd.CommandText = "SELECT TOP " & numQbox.Value & " txt,opta,optb,optc,optd FROM questions WHERE tid in(select tid from topics where name in(SELECT txt FROM tmpq)) AND level=" & LEVELtrackbar.Value + 1 & ""
+        If RandomizeCheckBox.Checked = True And AnyLvlCheckBox.Enabled = True Then
+            myFilteredCmd.CommandText = "SELECT TOP " & numOfQuestNumBox.Value & " txt,opta,optb,optc,optd FROM questions WHERE tid in(select tid from topics where name in(SELECT txt FROM tmpq)) ORDER BY newid()"
+        ElseIf RandomizeCheckBox.Checked = True And AnyLvlCheckBox.Enabled = False Then
+            myFilteredCmd.CommandText = "SELECT TOP " & numOfQuestNumBox.Value & " txt,opta,optb,optc,optd FROM questions WHERE tid in(select tid from topics where name in(SELECT txt FROM tmpq)) AND level=" & LevelTrackBar.Value + 1 & " ORDER BY newid()"
+        ElseIf RandomizeCheckBox.Checked = False And AnyLvlCheckBox.Enabled = True Then
+            myFilteredCmd.CommandText = "SELECT TOP " & numOfQuestNumBox.Value & " txt,opta,optb,optc,optd FROM questions WHERE tid in(select tid from topics where name in(SELECT txt FROM tmpq))"
+        ElseIf RandomizeCheckBox.Checked = False And AnyLvlCheckBox.Enabled = False Then
+            myFilteredCmd.CommandText = "SELECT TOP " & numOfQuestNumBox.Value & " txt,opta,optb,optc,optd FROM questions WHERE tid in(select tid from topics where name in(SELECT txt FROM tmpq)) AND level=" & LevelTrackBar.Value + 1 & ""
         End If
         myConn.Open()
         myFilteredCmd.ExecuteNonQuery()
@@ -87,7 +89,7 @@ Public Class designer
     End Sub
     Private Sub designer_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        Label13.Text = "0"
+        SelectedTopValueLabel.Text = "0"
         Dim treeDataSet As DataSet
         Dim categoriesTA As New SqlClient.SqlDataAdapter("SELECT name,cid from categories", myConn)
         Dim topicsTA As New SqlClient.SqlDataAdapter("SELECT name,cid FROM topics where cid in (select cid from categories)", myConn)
@@ -117,7 +119,7 @@ Public Class designer
             'parentnode.Tag = "Category"
             parentnode.Tag = parentrow.Item(0)
             TreeView1.Nodes.Add(parentnode)
-            multiCatList.Items.Add(parentrow.Item(0))
+            MultiCategListBox.Items.Add(parentrow.Item(0))
             'childs population
             Dim childrow As DataRow
             Dim childnode As TreeNode
@@ -134,7 +136,7 @@ Public Class designer
         For Each parentrow In qlistDTable.Rows
             Dim listviewitem As ListViewItem
             listviewitem = New ListViewItem(parentrow.Item(0).ToString)
-            questionListView.Items.Add(listviewitem)
+            QuestionListView.Items.Add(listviewitem)
             'qListView child population
             For i = 1 To 6
                 listviewsubitem = New ListViewItem(parentrow.Item(i).ToString)
@@ -142,8 +144,8 @@ Public Class designer
                 'questionListView.Items.Item(0).SubItems.Add(parentrow.Item(i).ToString)
             Next
         Next
-        Label9.Text = questionListView.Items.Count.ToString
-        Label11.Text = multiCatList.Items.Count.ToString
+        TotalQuestValueLabel.Text = QuestionListView.Items.Count.ToString
+        TotalCategValueLabel.Text = MultiCategListBox.Items.Count.ToString
         'If questionListView.Items.Count = 0 Then
         'Button7.Enabled = False
         'Else
@@ -151,134 +153,130 @@ Public Class designer
         'End If
     End Sub
     Private Sub TreeView1_NodeMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
-        childclicked.Text = e.Node.Tag
+        childClickedName = e.Node.Tag
 
-        If Not childclicked.Text = "" Then
-            Button9.Enabled = True
-            Button10.Enabled = True
-            Button3.Enabled = True
-            Button4.Enabled = True
+        If Not childClickedName = "" Then
+            EditCategoryButton.Enabled = True
+            EditTopicButton.Enabled = True
+            DeleteCategoryButton.Enabled = True
+            DeleteTopicButton.Enabled = True
             EditCategoryToolStripMenuItem.Enabled = True
             DeleteCategoryToolStripMenuItem1.Enabled = True
             EditTopicToolStripMenuItem.Enabled = True
             DeleteTopicToolStripMenuItem1.Enabled = True
         End If
-       
+
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+    Private Sub DeleteCategoryButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteCategoryButton.Click
         myCmd = myConn.CreateCommand
-        myCmd.CommandText = "DELETE FROM categories WHERE name=('" & childclicked.Text & "')"
+        myCmd.CommandText = "DELETE FROM categories WHERE name=('" & childClickedName & "')"
         myConn.Open()
         myCmd.ExecuteNonQuery()
         MessageBox.Show("The selected category will be deleted! In case of topics and questions inside the category, they will become orphaned upon deletion. First, delete the corresponding questions and topics.", "Warning")
         myConn.Close()
-        Me.Controls.Clear()
-        InitializeComponent()
-        designer_Load(e, e)
+        Reload()
     End Sub
 
-    Private Sub questionListView_ItemSelectionChanged(ByVal sender As Object, ByVal e As System.Windows.Forms.ListViewItemSelectionChangedEventArgs) Handles questionListView.ItemSelectionChanged
-        Button6.Enabled = True
-        Button7.Enabled = True
+    Private Sub questionListView_ItemSelectionChanged(ByVal sender As Object, ByVal e As System.Windows.Forms.ListViewItemSelectionChangedEventArgs) Handles QuestionListView.ItemSelectionChanged
+        EditQuestionButton.Enabled = True
+        DeleteQuestionButton.Enabled = True
     End Sub
 
-
-
-    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+    Private Sub DeleteQuestionButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteQuestionButton.Click
         Dim sItem As String
-        sItem = questionListView.Items(questionListView.FocusedItem.Index).SubItems(0).Text()
+        sItem = QuestionListView.Items(QuestionListView.FocusedItem.Index).SubItems(0).Text()
         myCmd = myConn.CreateCommand
         myCmd.CommandText = "DELETE FROM questions WHERE qid =('" & sItem & "')"
         myConn.Open()
         myCmd.ExecuteNonQuery()
         MessageBox.Show("The selected question will be deleted.", "Warning")
         myConn.Close()
-        Me.Controls.Clear()
-        InitializeComponent()
-        designer_Load(e, e)
+        Reload()
     End Sub
-    Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles multiCatList.SelectedIndexChanged
+    Private Sub MultiCategListBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MultiCategListBox.SelectedIndexChanged
         ' OTAN DEN DIALEGO TIPOTE NA MIN KSEKINAEI QUERY
-        If multiCatList.SelectedItems.Count <> 0 Then
-            multiTopList.Items.Clear()
+        If MultiCategListBox.SelectedItems.Count <> 0 Then
+            MultiTopListBox.Items.Clear()
             myFilteredCmd = myConn.CreateCommand
-            myFilteredCmd.CommandText = "SELECT name FROM topics WHERE cid in(select cid from categories where name='" & multiCatList.SelectedItem.ToString & "')"
+            myFilteredCmd.CommandText = "SELECT name FROM topics WHERE cid in(select cid from categories where name='" & MultiCategListBox.SelectedItem.ToString & "')"
             myConn.Open()
             myFilteredCmd.ExecuteNonQuery()
             myReader = myFilteredCmd.ExecuteReader()
             Do While myReader.Read()
                 results = myReader.GetString(0)
-                multiTopList.Items.Add(results)
+                MultiTopListBox.Items.Add(results)
             Loop
             myReader.Close()
             myConn.Close()
-            sALLbtn.Enabled = True
-            sNONEbtn.Enabled = True
-            SAVEbtn.Enabled = True
+            SelectAllButton.Enabled = True
+            SelectNoneButton.Enabled = True
+            SaveButton.Enabled = True
         End If
     End Sub
 
-    Private Sub multiTopList_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles multiTopList.SelectedIndexChanged
-        Label13.Text = multiTopList.SelectedItems.Count.ToString
+    Private Sub multiTopList_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MultiTopListBox.SelectedIndexChanged
+        SelectedTopValueLabel.Text = MultiTopListBox.SelectedItems.Count.ToString
     End Sub
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+    Private Sub DeleteTopicButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteTopicButton.Click
         myCmd = myConn.CreateCommand
-        myCmd.CommandText = "DELETE FROM topics WHERE name=('" & childclicked.Text & "')"
+        myCmd.CommandText = "DELETE FROM topics WHERE name=('" & childClickedName & "')"
         myConn.Open()
         myCmd.ExecuteNonQuery()
         MessageBox.Show("The selected topic will be deleted! In case of questions inside the category, they will become orphaned upon deletion. First, delete the corresponding questions.", "Warning")
         myConn.Close()
+        Reload()
+    End Sub
+
+    Friend Sub Reload()
         Me.Controls.Clear()
         InitializeComponent()
+        Dim e As New EventArgs()
         designer_Load(e, e)
     End Sub
-    Private Sub Button11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReloadBtn.Click
-        Me.Controls.Clear()
-        InitializeComponent()
-        designer_Load(e, e)
-    End Sub
-    Private Sub Button11_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sALLbtn.Click
+
+    Private Sub SelectAllButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SelectAllButton.Click
         Dim i As Integer
-        For i = 0 To multiTopList.Items.Count - 1
-            multiTopList.SetSelected(i, True)
+        For i = 0 To MultiTopListBox.Items.Count - 1
+            MultiTopListBox.SetSelected(i, True)
         Next
     End Sub
-    Private Sub Button11_Click_2(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SAVEbtn.Click
+
+    Private Sub SaveButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveButton.Click
         Dim listItem As String
         Dim i As Integer = 0
 
-        TextBox1.Text = " "
-        Label13.Text = multiTopList.SelectedItems.Count.ToString    '<= LABEL FOR SELECTED TOPICS COUNT
-        Dim arraySelectedTOPS(multiTopList.SelectedItems.Count)     '<= STORE EACH SELECTED TOPIC IN AN ARRAY
+        categoriesSelected = " "
+        SelectedTopValueLabel.Text = MultiTopListBox.SelectedItems.Count.ToString    '<= LABEL FOR SELECTED TOPICS COUNT
+        Dim arraySelectedTOPS(MultiTopListBox.SelectedItems.Count)     '<= STORE EACH SELECTED TOPIC IN AN ARRAY
         'Dim LISTselectedTOPS As New List(Of String)()               '<= DOKIMI KAI ME LISTA
 
-        If multiTopList.SelectedItems.Count = 0 Then
-            TextBox1.Text = " "
+        If MultiTopListBox.SelectedItems.Count = 0 Then
+            categoriesSelected = " "
             arraySelectedTOPS(0) = " "
             'LISTselectedTOPS.Clear()
         End If
-        For Each selecteditem As Object In multiTopList.SelectedItems
-            If multiTopList.SelectedItems.Count = 1 Then
+        For Each selecteditem As Object In MultiTopListBox.SelectedItems
+            If MultiTopListBox.SelectedItems.Count = 1 Then
                 listItem = selecteditem.ToString
-                TextBox1.Text = listItem
+                categoriesSelected = listItem
                 arraySelectedTOPS(i) = listItem
                 'LISTselectedTOPS.Add(listItem)
-            ElseIf multiTopList.SelectedItems.Count > 1 Then
+            ElseIf MultiTopListBox.SelectedItems.Count > 1 Then
                 listItem = selecteditem.ToString
                 arraySelectedTOPS(i) = listItem
-                TextBox1.Text += listItem + " "
+                categoriesSelected += listItem + " "
                 'LISTselectedTOPS.Add(listItem)
             End If
             i += 1
         Next
-        If TextBox1.Text = " " Then
+        If categoriesSelected = " " Then
             MsgBox("You have not selected any topic", , "Information")
         Else
-            MsgBox("You have selected the following topics:'" & TextBox1.Text & "'", , "Information")
+            MsgBox("You have selected the following topics:'" & categoriesSelected & "'", , "Information")
 
-            For i = 0 To multiTopList.SelectedItems.Count - 1
+            For i = 0 To MultiTopListBox.SelectedItems.Count - 1
                 'DEBUG: MsgBox(arraySelectedTOPS(i))
             Next
             myCmd = myConn.CreateCommand
@@ -287,7 +285,7 @@ Public Class designer
             myCmd.ExecuteNonQuery()
             myReader.Close()
             myConn.Close()
-            For i = 0 To multiTopList.SelectedItems.Count - 1
+            For i = 0 To MultiTopListBox.SelectedItems.Count - 1
                 myCmd.CommandText = "INSERT INTO tmpq (txt)VALUES ('" & arraySelectedTOPS(i) & "')"
                 myConn.Open()
                 myCmd.ExecuteNonQuery()
@@ -302,102 +300,36 @@ Public Class designer
             myReader.Read()
             results = myReader.GetInt32(0)
             'DEBUG:  MsgBox("DEBUG: COUNT OF QUESTIONS IN THE SELECTED TOPICS: " + results)
-            Label8.Text = results
-            numQbox.Maximum = results
+            QuestsInTopsValueLabel.Text = results
+            numOfQuestNumBox.Maximum = results
             myReader.Close()
             myConn.Close()
-            GENbtn.Enabled = True
+            GenerateButton.Enabled = True
         End If
     End Sub
 
-    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles sNONEbtn.Click
+    Private Sub SelectNoneButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SelectNoneButton.Click
         Dim i As Integer
-        For i = 0 To multiTopList.Items.Count - 1
-            multiTopList.SetSelected(i, False)
+        For i = 0 To MultiTopListBox.Items.Count - 1
+            MultiTopListBox.SetSelected(i, False)
         Next
     End Sub
 
-    Private Sub LEVELtrackbar_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LEVELtrackbar.Scroll
-        Label16.Text = LEVELtrackbar.Value + 1.ToString
+    Private Sub LevelTrackBar_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LevelTrackBar.Scroll
+        Label16.Text = LevelTrackBar.Value + 1.ToString
     End Sub
 
-    Private Sub numQbox_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles numQbox.ValueChanged
-    End Sub
+    Private Sub QuestionListView_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles QuestionListView.SelectedIndexChanged
 
-    Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect
-      
-    End Sub
-
-    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
-
-
-
-    End Sub
-
-    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
-
-
-    End Sub
-
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
-       
-       
-
-
-    End Sub
-
-    Private Sub questionListView_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles questionListView.LostFocus
-
-    End Sub
-
-    Private Sub questionListView_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles questionListView.SelectedIndexChanged
-       
-        If questionListView.SelectedIndices.Count = 0 Then
-            Button6.Enabled = False
-            Button7.Enabled = False
+        If QuestionListView.SelectedIndices.Count = 0 Then
+            EditQuestionButton.Enabled = False
+            DeleteQuestionButton.Enabled = False
         Else
-            Button6.Enabled = True
-            Button7.Enabled = True
+            EditQuestionButton.Enabled = True
+            DeleteQuestionButton.Enabled = True
             EditQuestionToolStripMenuItem.Enabled = True
             DeleteQuestionToolStripMenuItem1.Enabled = True
         End If
-
-
-
-
-
-    End Sub
-
-    Private Sub GroupBox1_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox1.Enter
-
-    End Sub
-
-   
-
-
-    Private Sub Label5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label5.Click
-     
-
-
-    End Sub
-
-    
-    Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-
-    End Sub
-
-    Private Sub AboutToolStripMenuItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-
-    End Sub
-
-    Private Sub DsdsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FileToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub AboutToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutToolStripMenuItem1.Click
-
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitToolStripMenuItem.Click
@@ -405,63 +337,23 @@ Public Class designer
         End
     End Sub
 
-    Private Sub MaintenanceToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MaintenanceToolStripMenuItem.Click
-      
-
-
-    End Sub
-
-    Private Sub EditCategoryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditCategoryToolStripMenuItem.Click
-
-
-    End Sub
-
     Private Sub NewCategoryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewCategoryToolStripMenuItem.Click
         insCategoryForm.Show()
-
-    End Sub
-
-    Private Sub DeleteCategoryToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteCategoryToolStripMenuItem1.Click
-
     End Sub
 
     Private Sub NewTopicToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewTopicToolStripMenuItem1.Click
         insTopicForm.Show()
-
-    End Sub
-
-    Private Sub EditTopicToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditTopicToolStripMenuItem.Click
-
-
     End Sub
 
     Private Sub NewQuestionToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewQuestionToolStripMenuItem1.Click
         insQuestionForm.Show()
-
     End Sub
 
-    Private Sub EditQuestionToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditQuestionToolStripMenuItem.Click
-
-
-    End Sub
-
-    Private Sub Label16_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label16.Click
-
-    End Sub
-
-    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles anyCHK.CheckedChanged
-        If LEVELtrackbar.Enabled = True Then
-            LEVELtrackbar.Enabled = False
+    Private Sub AnyLvlCheckBox_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AnyLvlCheckBox.CheckedChanged
+        If LevelTrackBar.Enabled = True Then
+            LevelTrackBar.Enabled = False
         Else
-            LEVELtrackbar.Enabled = True
+            LevelTrackBar.Enabled = True
         End If
-    End Sub
-
-    Private Sub ContextMenuStrip2_Opening(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip2.Opening
-
-    End Sub
-
-    Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem1.Click
-
     End Sub
 End Class

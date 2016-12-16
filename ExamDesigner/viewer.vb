@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic.PowerPacks.Printing
-Imports System.IO
+﻿Imports System.IO
 Imports System.Drawing.Printing
 Imports System.Data.SqlClient
 
@@ -10,7 +9,7 @@ Public Class viewer
     Public myViewReader As SqlDataReader
     Public myViewResults As String
 
-    Public savestatus = False
+    Public saveStatus = False
     Public tmpdir = Path.GetTempPath()
     Private Sub viewer_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If System.IO.File.Exists(tmpdir + "tmptest.html") Then
@@ -88,35 +87,13 @@ Public Class viewer
         'Next
     End Sub
 
-
-    Private Sub ToolStripButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Private Sub ToolStrip1_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs)
-
-    End Sub
-
-    Private Sub WebBrowser1_DocumentCompleted(ByVal sender As System.Object, ByVal e As System.Windows.Forms.WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
-
-
-    End Sub
-
-    Private Sub savBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles savBtn.Click
+    Private Sub savBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveToolStripButton.Click
         SaveFileDialog1.Filter = "HTML files (*.html)|*.html"
         SaveFileDialog1.ShowDialog()
     End Sub
 
-    Private Sub viewerMenu_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs) Handles viewerMenu.ItemClicked
-
-    End Sub
-
-    Private Sub prntBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles prntBtn.Click
+    Private Sub prntBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PrintToolStripButton.Click
         WebBrowser1.Print()
-    End Sub
-
-    Private Sub SaveFileDialog1_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles SaveFileDialog1.Disposed
-
     End Sub
 
     Private Sub SaveFileDialog1_FileOk(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles SaveFileDialog1.FileOk
@@ -126,14 +103,11 @@ Public Class viewer
             File.WriteAllBytes(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), fpath), bytes)
         End Using
         File.Delete(tmpdir + "tmptest.html")
-        savestatus = True
-
-
-
+        saveStatus = True
     End Sub
 
-    Private Sub xBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles xBtn.Click
-        If savestatus = False Then
+    Private Sub CloseToolStripButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CloseToolStripButton.Click
+        If saveStatus = False Then
             MsgBox("You have not saved the current test. If you close the viewer, the test will be lost!", MsgBoxStyle.OkCancel, "Warning")
 
         End If
